@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{B79ADF3F-4999-465A-B71F-E77B60A987DF}|Default">
+  <MonoDevelop.Ide.ItemProperties.MTM_220Holidays FirstBuild="True" PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Holiday.cs">
+    <Files>
+      <File FileName="Program.cs" />
+      <File FileName="appsettings.json" />
+      <File FileName="Models/Holiday.cs" Line="15" Column="20" />
+      <File FileName="Models/Order_Holiday.cs" Line="9" Column="53" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MTM Holidays" expanded="True">
+            <Node name="MTM Holidays" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Holiday.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
