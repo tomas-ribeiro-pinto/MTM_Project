@@ -9,11 +9,10 @@ namespace MTM_Holidays.Models
 	/// 
     /// Holidays can have start and end dates according to customer needs.
     /// The price reflects the cost per customer per day in the holiday.
-    /// There should be a minimum of 2 day interval between start and end date.
 	/// 
     /// </summary>
     /// <author>Tomás Pinto</author>
-    /// <version>14th Dec 2022</version>
+    /// <version>15th Dec 2022</version>
     public class Holiday
 	{
 		[Key]
@@ -31,16 +30,6 @@ namespace MTM_Holidays.Models
 		[Range(0.0, 10000, ErrorMessage = "The field {0} must be between {1} and {2}")]
 		public double Price { get; set; } = 0;
 
-		[DataType(DataType.DateTime, ErrorMessage = "Invalid Date Format")]
-		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-		public DateTime StartDate { get; set; } = DateTime.Now;
-
-		// There should be a minimum of 2 day interval
-		// for each holiday. Needs to be updated to reflect start date...
-		[DataType(DataType.DateTime, ErrorMessage = "Invalid Date Format")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime EndDate { get; set; } = DateTime.Now;
-
 		[Required, MaxLength(50, ErrorMessage = "The field {0} is too long")]
 		public string Region { get; set; } = String.Empty;
 
@@ -57,6 +46,9 @@ namespace MTM_Holidays.Models
         public int DestinationAddressID { get; set; }
         //TODO Remove after creation of entity Address
         //public Address DestinationAddress { get; set; }
+
+        //TODO Remove after creation of entity Picture
+        //public List<Picture> Pictures { get; set; }
     }
 }
 
