@@ -4,14 +4,10 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-MTM_Holidays-9856a618-3eb4-46f8-ab4d-be0885ed7d07</UserSecretsId>
+    <UserSecretsId>aspnet-MTM_Holidays-357081a3-b7a9-4fde-ab39-b4d6364e6a0e</UserSecretsId>
     <RootNamespace>MTM_Holidays</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
-    <None Remove="Models\" />
-  </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>
@@ -22,10 +18,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
 </Project>
