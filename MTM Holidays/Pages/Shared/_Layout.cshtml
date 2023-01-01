@@ -12,37 +12,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">MTM_Holidays</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav" style="background: #023E73;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/"></a><img src="assets/img/MTM-3_crop.png" style="height: 3em;margin-left: 3em;"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/" style="color: rgb(242,112,82);">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-gray-100);">Holidays</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-gray-100);">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ" style="color: var(--bs-gray-100);">FAQ</a></li>
+                </ul><button class="btn" type="button" style="color: rgb(255,255,255);">
+                    0&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-basket2" style="font-size: 24px;">
+                        <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"></path>
+                        <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"></path>
+                    </svg>
+                </button><a class="btn btn-primary shadow" role="button" href="signup.html" style="background: #567b92;border-style: none;border-color: var(--bs-navbar-hover-color);">Login</a>
+                <!--DONT remove this pls
                     <partial name="_LoginPartial" />
-                </div>
+                    -->
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - MTM_Holidays - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer>
+        <div class="container py-4 py-lg-5">
+            <div class="row row-cols-2 row-cols-md-4">
+                <div class="col-12 col-md-3">
+                    <div class="fw-bold d-flex align-items-center mb-2"><span>Brand</span></div>
+                    <p class="text-muted"></p>
+                </div>
+                <div class="col-sm-4 col-md-3 text-lg-start d-flex flex-column">
+                    <h3 class="fs-6 fw-bold">Services</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-lg-start d-flex flex-column">
+                    <h3 class="fs-6 fw-bold">About</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Legacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-lg-start d-flex flex-column">
+                    <h3 class="fs-6 fw-bold">Careers</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Job openings</a></li>
+                        <li><a href="#">Employee success</a></li>
+                        <li><a href="#">Benefits</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2023 MTM - Holidays</p>
+            </div>
         </div>
     </footer>
 

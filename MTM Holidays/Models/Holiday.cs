@@ -47,8 +47,7 @@ namespace MTM_Holidays.Models
         //TODO Remove after creation of entity Address
         //public Address DestinationAddress { get; set; }
 
-        //TODO Remove after creation of entity Picture
-        //public List<Picture> Pictures { get; set; }
+        public List<Picture> Pictures { get; set; }
     }
 }
 
