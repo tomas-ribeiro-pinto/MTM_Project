@@ -4,7 +4,7 @@
 
 namespace MTM_Holidays.Data.Migrations
 {
-    public partial class AddPicture : Migration
+    public partial class InitialCommit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

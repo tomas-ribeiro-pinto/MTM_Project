@@ -1,27 +1,41 @@
 ﻿<Properties StartupConfiguration="{461056B8-C6BA-49DA-851F-085E84BB2622}|Default">
   <MonoDevelop.Ide.ItemProperties.MTM_220Holidays PreferredExecutionTarget="/Applications/Opera.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Holiday.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Data/ApplicationDbContext.cs" />
-      <File FileName="Pages/Shared/_Layout.cshtml" Line="23" Column="71" />
-      <File FileName="wwwroot/css/site.css" Line="6" Column="5" />
+      <File FileName="Data/ApplicationDbContext.cs" Line="20" Column="1" />
+      <File FileName="Pages/Shared/_Layout.cshtml" Line="29" Column="48" />
+      <File FileName="wwwroot/css/site.css" />
       <File FileName="wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
-      <File FileName="Models/Order_Holiday.cs" Line="36" Column="1" />
-      <File FileName="Models/Holiday.cs" Line="50" Column="52" />
-      <File FileName="Pages/Shared/_LoginPartial.cshtml" Line="1" Column="1" />
-      <File FileName="Pages/Index.cshtml" Line="13" Column="49" />
-      <File FileName="Pages/FAQ.cshtml" Line="11" Column="137" />
-      <File FileName="Pages/FAQ.cshtml.cs" Line="14" Column="1" />
-      <File FileName="Models/Picture.cs" Line="25" Column="1" />
+      <File FileName="Models/Order_Holiday.cs" Line="39" Column="41" />
+      <File FileName="Models/Holiday.cs" Line="24" Column="19" />
+      <File FileName="Pages/Shared/_LoginPartial.cshtml" Line="23" Column="72" />
+      <File FileName="Pages/Index.cshtml" />
+      <File FileName="Pages/FAQ.cshtml" />
+      <File FileName="Pages/FAQ.cshtml.cs" />
+      <File FileName="Models/Picture.cs" />
+      <File FileName="Models/DiscountCode.cs" Line="12" Column="93" />
+      <File FileName="Program.cs" Line="13" Column="43" />
+      <File FileName="Data/DbInitializer.cs" Line="21" Column="1" />
+      <File FileName="Data/Migrations/20230105142037_InitialCommit.cs" Line="1" Column="1" />
+      <File FileName="Data/Migrations/20230105142237_InitialCommit.cs" Line="1" Column="1" />
+      <File FileName="Data/Migrations/ApplicationDbContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Shared/_ValidationScriptsPartial.cshtml" Line="4" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MTM Holidays" expanded="True">
-            <Node name="MTM Holidays" expanded="True" selected="True">
-              <Node name="Areas" expanded="True" />
-              <Node name="Data" expanded="True" />
+            <Node name="MTM Holidays" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Data" expanded="True">
+                <Node name="Migrations" expanded="True" />
+              </Node>
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="Shared" expanded="True" />
@@ -30,6 +44,7 @@
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
               </Node>
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
