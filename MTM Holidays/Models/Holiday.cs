@@ -40,12 +40,10 @@ namespace MTM_Holidays.Models
 		public string AccommodationType { get; set; } = String.Empty;
 
 		public int OriginAddressID { get; set; }
-		//TODO Remove after creation of entity Address
-		//public Address OriginAddress { get; set; }
+		public Address OriginAddress { get; set; }
 
         public int DestinationAddressID { get; set; }
-        //TODO Remove after creation of entity Address
-        //public Address DestinationAddress { get; set; }
+        public Address DestinationAddress { get; set; }
 
         public List<Picture> Pictures { get; set; }
     }
