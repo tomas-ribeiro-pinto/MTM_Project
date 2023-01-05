@@ -1,0 +1,67 @@
+@page
+@model MTM_Holidays.Pages.Holidays.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Holiday</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Holiday.Title" class="control-label"></label>
+                <input asp-for="Holiday.Title" class="form-control" />
+                <span asp-validation-for="Holiday.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Holiday.Description" class="control-label"></label>
+                <input asp-for="Holiday.Description" class="form-control" />
+                <span asp-validation-for="Holiday.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Holiday.Price" class="control-label"></label>
+                <input asp-for="Holiday.Price" class="form-control" />
+                <span asp-validation-for="Holiday.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Holiday.Region" class="control-label"></label>
+                <input asp-for="Holiday.Region" class="form-control" />
+                <span asp-validation-for="Holiday.Region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Holiday.Rating" class="control-label"></label>
+                <input asp-for="Holiday.Rating" class="form-control" />
+                <span asp-validation-for="Holiday.Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Holiday.AccommodationType" class="control-label"></label>
+                <input asp-for="Holiday.AccommodationType" class="form-control" />
+                <span asp-validation-for="Holiday.AccommodationType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Holiday.OriginAddressID" class="control-label"></label>
+                <select asp-for="Holiday.OriginAddressID" class ="form-control" asp-items="ViewBag.OriginAddressID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Holiday.DestinationAddressID" class="control-label"></label>
+                <select asp-for="Holiday.DestinationAddressID" class ="form-control" asp-items="ViewBag.DestinationAddressID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

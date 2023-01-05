@@ -213,6 +213,111 @@ namespace MTM_Holidays.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("MTM_Holidays.Models.Address", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("County")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PostCode")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Region")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Town")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Address");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.CardPayment", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CardNumber")
+                        .HasMaxLength(10)
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SecurityCode")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("CardPayment");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Customer", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AddressID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CardPaymentID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PhoneNumber")
+                        .HasMaxLength(11)
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("AddressID");
+
+                    b.HasIndex("CardPaymentID");
+
+                    b.ToTable("Customer");
+                });
+
             modelBuilder.Entity("MTM_Holidays.Models.DiscountCode", b =>
                 {
                     b.Property<int>("ID")
@@ -229,6 +334,136 @@ namespace MTM_Holidays.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("DiscountCodes");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Holiday", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("AccommodationType")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DestinationAddressID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("OrderID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("OriginAddressID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Region")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("DestinationAddressID");
+
+                    b.HasIndex("OrderID");
+
+                    b.HasIndex("OriginAddressID");
+
+                    b.ToTable("Holidays");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Order", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CustomerID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CustomerID");
+
+                    b.ToTable("Order");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Order_Holiday", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Discount")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("DiscountCodeID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("HolidayID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsPaid")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("OrderID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("DiscountCodeID");
+
+                    b.HasIndex("HolidayID");
+
+                    b.HasIndex("OrderID");
+
+                    b.ToTable("Order_Holidays");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Picture", b =>
+                {
+                    b.Property<int>("PictureID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("HolidayID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("URL")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PictureID");
+
+                    b.HasIndex("HolidayID");
+
+                    b.ToTable("Pictures");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -280,6 +515,112 @@ namespace MTM_Holidays.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Customer", b =>
+                {
+                    b.HasOne("MTM_Holidays.Models.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("AddressID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MTM_Holidays.Models.CardPayment", "CardPayment")
+                        .WithMany()
+                        .HasForeignKey("CardPaymentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Address");
+
+                    b.Navigation("CardPayment");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Holiday", b =>
+                {
+                    b.HasOne("MTM_Holidays.Models.Address", "DestinationAddress")
+                        .WithMany()
+                        .HasForeignKey("DestinationAddressID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MTM_Holidays.Models.Order", null)
+                        .WithMany("Holidays")
+                        .HasForeignKey("OrderID");
+
+                    b.HasOne("MTM_Holidays.Models.Address", "OriginAddress")
+                        .WithMany()
+                        .HasForeignKey("OriginAddressID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DestinationAddress");
+
+                    b.Navigation("OriginAddress");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Order", b =>
+                {
+                    b.HasOne("MTM_Holidays.Models.Customer", "Customer")
+                        .WithMany("Orders")
+                        .HasForeignKey("CustomerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Order_Holiday", b =>
+                {
+                    b.HasOne("MTM_Holidays.Models.DiscountCode", "DiscountCode")
+                        .WithMany()
+                        .HasForeignKey("DiscountCodeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MTM_Holidays.Models.Holiday", "Holiday")
+                        .WithMany()
+                        .HasForeignKey("HolidayID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MTM_Holidays.Models.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DiscountCode");
+
+                    b.Navigation("Holiday");
+
+                    b.Navigation("Order");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Picture", b =>
+                {
+                    b.HasOne("MTM_Holidays.Models.Holiday", "Holiday")
+                        .WithMany("Pictures")
+                        .HasForeignKey("HolidayID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Holiday");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Customer", b =>
+                {
+                    b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Holiday", b =>
+                {
+                    b.Navigation("Pictures");
+                });
+
+            modelBuilder.Entity("MTM_Holidays.Models.Order", b =>
+                {
+                    b.Navigation("Holidays");
                 });
 #pragma warning restore 612, 618
         }

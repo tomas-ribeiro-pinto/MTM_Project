@@ -8,49 +8,149 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MTM_Holidays
 build_property.RootNamespace = MTM_Holidays
-build_property.ProjectDir = C:\Users\milen\source\repos\co550web\MTM_Project\MTM Holidays\
+build_property.ProjectDir = /Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\milen\source\repos\co550web\MTM_Project\MTM Holidays
+build_property.MSBuildProjectDirectory = /Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Areas/Identity/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Addresses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkcmVzc2VzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/FAQ.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRkFRLmNzaHRtbA==
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Addresses/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkcmVzc2VzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Addresses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkcmVzc2VzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Addresses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkcmVzc2VzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/Shared/_LoginPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Addresses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkcmVzc2VzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Discounts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGlzY291bnRzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Discounts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGlzY291bnRzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Discounts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGlzY291bnRzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-7ot62j0zdo
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Discounts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGlzY291bnRzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Discounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGlzY291bnRzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRkFRLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Holidays/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9saWRheXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Holidays/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9saWRheXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Holidays/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9saWRheXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Holidays/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9saWRheXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Holidays/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9saWRheXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Orders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXJzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Orders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXJzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Orders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXJzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Orders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXJzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXJzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Pictures/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGljdHVyZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Pictures/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGljdHVyZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Pictures/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGljdHVyZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Pictures/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGljdHVyZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Pictures/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGljdHVyZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-i5jyh13uhq

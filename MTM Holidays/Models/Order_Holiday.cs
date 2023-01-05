@@ -37,9 +37,7 @@ namespace MTM_Holidays.Models
         public Holiday Holiday { get; set; }
 
         public int OrderID { get; set; }
-        // TODO: Remove after creation of entity Order
-        //public Order Order { get; set; }
-
+        public Order Order { get; set; }
 
         public int DiscountCodeID { get; set; }
         public DiscountCode DiscountCode { get; set; } 
