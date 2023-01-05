@@ -16,7 +16,7 @@ namespace MTM_Holidays.Models
     public class Holiday
 	{
 		[Key]
-        public int HolidayID { get; set; }
+        public int ID { get; set; }
 
 		[Required, MaxLength(30, ErrorMessage = "The field {0} is too long")]
 		public string Title { get; set; } = String.Empty;

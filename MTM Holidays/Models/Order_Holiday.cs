@@ -40,6 +40,9 @@ namespace MTM_Holidays.Models
         // TODO: Remove after creation of entity Order
         //public Order Order { get; set; }
 
+
+        public int DiscountCodeID { get; set; }
+        public DiscountCode DiscountCode { get; set; } 
     }
 }
 
