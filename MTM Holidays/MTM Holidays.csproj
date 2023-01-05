@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Pages\Addresses\" />
+    <None Remove="Pages\Holidays\" />
+    <None Remove="Pages\Orders\" />
+    <None Remove="Pages\Pictures\" />
+    <None Remove="Pages\Discounts\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="wwwroot\assets\bootstrap\css\bootstrap.min.css" />
     <None Include="wwwroot\assets\bootstrap\js\bootstrap.min.js" />
     <None Include="wwwroot\assets\img\brands\instacart.png" />
@@ -44,6 +54,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -75,5 +91,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\assets\" />
+    <Folder Include="Pages\Addresses\" />
+    <Folder Include="Pages\Holidays\" />
+    <Folder Include="Pages\Orders\" />
+    <Folder Include="Pages\Pictures\" />
+    <Folder Include="Pages\Discounts\" />
   </ItemGroup>
 </Project>

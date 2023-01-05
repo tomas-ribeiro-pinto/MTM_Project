@@ -22,6 +22,7 @@ namespace MTM_Holidays.Models
         [Required]
         public string Code { get; set; } = String.Empty;
 
+        [Required]
         [DataType(DataType.Currency, ErrorMessage = "Invalid format for field {0}")]
         public double Discount { get; set; } = 0;
     }

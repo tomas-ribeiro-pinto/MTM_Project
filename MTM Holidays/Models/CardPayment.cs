@@ -17,18 +17,17 @@ namespace MTM_Holidays.Models
         public int ID { get; set; }
 
         [Required, MaxLength(10, ErrorMessage = "The field {0} is too long")]
+        [DataType(DataType.CreditCard)]
         public int CardNumber { get; set; }
 
 
-        [Required, Range(1, 3, ErrorMessage = "The field {0} must be between {1} and {2}")]
-        public int SecurityCode { get; set; }
+        [Required, StringLength(3, ErrorMessage = "The field {0} must be {1} characters long}")]
+        public string SecurityCode { get; set; }
 
 
         [Required, DataType(DataType.DateTime, ErrorMessage = "Invalid Date Format")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0: MM/yyyy}")]
         public DateTime ExpiryDate { get; set; }
-
-
 
 
     }
