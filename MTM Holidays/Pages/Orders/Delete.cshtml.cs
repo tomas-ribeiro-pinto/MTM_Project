@@ -24,12 +24,12 @@ namespace MTM_Holidays.Pages.Orders
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Order == null)
+            if (id == null || _context.Orders == null)
             {
                 return NotFound();
             }
 
-            var order = await _context.Order.FirstOrDefaultAsync(m => m.ID == id);
+            var order = await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);
 
             if (order == null)
             {
@@ -44,16 +44,16 @@ namespace MTM_Holidays.Pages.Orders
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Order == null)
+            if (id == null || _context.Orders == null)
             {
                 return NotFound();
             }
-            var order = await _context.Order.FindAsync(id);
+            var order = await _context.Orders.FindAsync(id);
 
             if (order != null)
             {
                 Order = order;
-                _context.Order.Remove(Order);
+                _context.Orders.Remove(Order);
                 await _context.SaveChangesAsync();
             }
 

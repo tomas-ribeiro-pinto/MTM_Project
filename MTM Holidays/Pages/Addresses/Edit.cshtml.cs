@@ -25,12 +25,12 @@ namespace MTM_Holidays.Pages.Addresses
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Address == null)
+            if (id == null || _context.Addresses == null)
             {
                 return NotFound();
             }
 
-            var address =  await _context.Address.FirstOrDefaultAsync(m => m.ID == id);
+            var address =  await _context.Addresses.FirstOrDefaultAsync(m => m.ID == id);
             if (address == null)
             {
                 return NotFound();
@@ -71,7 +71,7 @@ namespace MTM_Holidays.Pages.Addresses
 
         private bool AddressExists(int id)
         {
-          return (_context.Address?.Any(e => e.ID == id)).GetValueOrDefault();
+          return (_context.Addresses?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }

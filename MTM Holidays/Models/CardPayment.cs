@@ -16,12 +16,12 @@ namespace MTM_Holidays.Models
         [Key]
         public int ID { get; set; }
 
-        [Required, MaxLength(10, ErrorMessage = "The field {0} is too long")]
+        [Required, MaxLength(16), MinLength(16, ErrorMessage = "The field {0} must be 10 characters long")]
         [DataType(DataType.CreditCard)]
-        public int CardNumber { get; set; }
+        public string CardNumber { get; set; }
 
 
-        [Required, StringLength(3, ErrorMessage = "The field {0} must be {1} characters long}")]
+        [Required, MinLength(3, ErrorMessage = "The field {0} must be {1} characters long"), MaxLength(3)]
         public string SecurityCode { get; set; }
 
 

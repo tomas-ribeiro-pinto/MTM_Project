@@ -25,9 +25,9 @@ namespace MTM_Holidays.Models
         public string EmailAddress { get; set; } = String.Empty;
 
         [MinLength(9), MaxLength(11), DataType(DataType.PhoneNumber, ErrorMessage = "Invalid Phone Number")]
-        public int PhoneNumber { get; set;}
+        public string PhoneNumber { get; set;}
 
-        [Required, DataType(DataType.DateTime, ErrorMessage = "Invalid Date Format")]
+        [Required, DataType(DataType.Date, ErrorMessage = "Invalid Date Format")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0: dd/MM/yyyy}")]
         public DateTime DateOfBirth { get; set; }
 

@@ -36,8 +36,8 @@ namespace MTM_Holidays.Pages.Holidays
                 return NotFound();
             }
             Holiday = holiday;
-           ViewData["DestinationAddressID"] = new SelectList(_context.Address, "ID", "Country");
-           ViewData["OriginAddressID"] = new SelectList(_context.Address, "ID", "Country");
+           ViewData["DestinationAddressID"] = new SelectList(_context.Addresses, "ID", "Country");
+           ViewData["OriginAddressID"] = new SelectList(_context.Addresses, "ID", "Country");
             return Page();
         }
 

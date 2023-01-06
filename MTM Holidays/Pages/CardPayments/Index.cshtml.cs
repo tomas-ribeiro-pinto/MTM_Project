@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MTM_Holidays.Data;
 using MTM_Holidays.Models;
 
-namespace MTM_Holidays.Pages.Addresses
+namespace MTM_Holidays.Pages.CardPayments
 {
     public class IndexModel : PageModel
     {
@@ -19,13 +19,13 @@ namespace MTM_Holidays.Pages.Addresses
             _context = context;
         }
 
-        public IList<Address> Address { get;set; } = default!;
+        public IList<CardPayment> CardPayment { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Addresses != null)
+            if (_context.CardPayments != null)
             {
-                Address = await _context.Addresses.ToListAsync();
+                CardPayment = await _context.CardPayments.ToListAsync();
             }
         }
     }

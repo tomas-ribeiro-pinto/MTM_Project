@@ -24,7 +24,7 @@ namespace MTM_Holidays.Models
             [Required, MaxLength(40, ErrorMessage = "The field {0} is too long")]
             public string Town { get; set; } = String.Empty;
 
-            [RangeAttribute(5, 7, ErrorMessage = "The field {0} must be between {1} and {2} characters")]
+            [MinLength(5, ErrorMessage = "The field {0} must be longer than {1} characters"), MaxLength(7)]
             public string PostCode { get; set; } = string.Empty;
 
             [MaxLength(30, ErrorMessage = "The field {0} is too long")]

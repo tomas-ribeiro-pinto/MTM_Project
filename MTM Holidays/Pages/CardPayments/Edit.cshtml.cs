@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using MTM_Holidays.Data;
 using MTM_Holidays.Models;
 
-namespace MTM_Holidays.Pages.Orders
+namespace MTM_Holidays.Pages.CardPayments
 {
     public class EditModel : PageModel
     {
@@ -21,22 +21,21 @@ namespace MTM_Holidays.Pages.Orders
         }
 
         [BindProperty]
-        public Order Order { get; set; } = default!;
+        public CardPayment CardPayment { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Orders == null)
+            if (id == null || _context.CardPayments == null)
             {
                 return NotFound();
             }
 
-            var order =  await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);
-            if (order == null)
+            var cardpayment =  await _context.CardPayments.FirstOrDefaultAsync(m => m.ID == id);
+            if (cardpayment == null)
             {
                 return NotFound();
             }
-            Order = order;
-           ViewData["CustomerID"] = new SelectList(_context.Set<Customer>(), "ID", "EmailAddress");
+            CardPayment = cardpayment;
             return Page();
         }
 
@@ -49,7 +48,7 @@ namespace MTM_Holidays.Pages.Orders
                 return Page();
             }
 
-            _context.Attach(Order).State = EntityState.Modified;
+            _context.Attach(CardPayment).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +56,7 @@ namespace MTM_Holidays.Pages.Orders
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!OrderExists(Order.ID))
+                if (!CardPaymentExists(CardPayment.ID))
                 {
                     return NotFound();
                 }
@@ -70,9 +69,9 @@ namespace MTM_Holidays.Pages.Orders
             return RedirectToPage("./Index");
         }
 
-        private bool OrderExists(int id)
+        private bool CardPaymentExists(int id)
         {
-          return (_context.Orders?.Any(e => e.ID == id)).GetValueOrDefault();
+          return _context.CardPayments.Any(e => e.ID == id);
         }
     }
 }
