@@ -21,7 +21,7 @@ namespace MTM_Holidays.Pages.Orders
 
         public IActionResult OnGet()
         {
-        ViewData["CustomerID"] = new SelectList(_context.Set<Customer>(), "ID", "EmailAddress");
+        ViewData["CustomerID"] = new SelectList(_context.Set<Customer>(), "ID", "FirstName");
             return Page();
         }
 
@@ -32,12 +32,12 @@ namespace MTM_Holidays.Pages.Orders
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Order == null || Order == null)
+          if (!ModelState.IsValid || _context.Orders == null || Order == null)
             {
                 return Page();
             }
 
-            _context.Order.Add(Order);
+            _context.Orders.Add(Order);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

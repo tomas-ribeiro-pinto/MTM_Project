@@ -21,8 +21,8 @@ namespace MTM_Holidays.Pages.Holidays
 
         public IActionResult OnGet()
         {
-        ViewData["DestinationAddressID"] = new SelectList(_context.Address, "ID", "Country");
-        ViewData["OriginAddressID"] = new SelectList(_context.Address, "ID", "Country");
+        ViewData["DestinationAddressID"] = new SelectList(_context.Addresses, "ID", "Town");
+        ViewData["OriginAddressID"] = new SelectList(_context.Addresses, "ID", "Town");
             return Page();
         }
 

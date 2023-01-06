@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-MTM_Holidays-357081a3-b7a9-4fde-ab39-b4d6364e6a0e</UserSecretsId>
     <RootNamespace>MTM_Holidays</RootNamespace>
@@ -17,6 +16,8 @@
     <None Remove="Pages\Orders\" />
     <None Remove="Pages\Pictures\" />
     <None Remove="Pages\Discounts\" />
+    <None Remove="Pages\Customers\" />
+    <None Remove="Pages\CardPayments\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\assets\bootstrap\css\bootstrap.min.css" />
@@ -96,5 +97,7 @@
     <Folder Include="Pages\Orders\" />
     <Folder Include="Pages\Pictures\" />
     <Folder Include="Pages\Discounts\" />
+    <Folder Include="Pages\Customers\" />
+    <Folder Include="Pages\CardPayments\" />
   </ItemGroup>
 </Project>

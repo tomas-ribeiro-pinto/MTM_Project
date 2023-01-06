@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav" style="background: #023E73;">
+    <nav class="navbar navbar-light sticky-top navbar-expand-md navbar-shrink py-3" id="mainNav" style="background: #023E73;">
         <div class="container">
-            <a href="/"><img src="assets/img/MTM-3_crop.png" style="height: 3.2em;margin-left: 3em;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <a href="/"><img src=@Url.Content("~/assets/img/MTM-3_crop.png") style="height: 3.2em;margin-left: 3em;"></a><button data-bs-toggle="collapse" class="bg-light navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="/" style="color: rgb(242,112,82);">Home</a></li>
@@ -34,16 +34,17 @@
         </div>
     </nav>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 mt-2">
             @RenderBody()
         </main>
     </div>
 
     <footer>
-        <div class="container py-4 py-lg-5">
+        <div class="container py-2 py-lg-5">
+            <!--
             <div class="row row-cols-2 row-cols-md-4">
                 <div class="col-12 col-md-3">
-                    <div class="fw-bold d-flex align-items-center mb-2"><span>Brand</span></div>
+                    <div class="fw-bold d-flex align-items-center mb-2"><span>Pages</span></div>
                     <p class="text-muted"></p>
                 </div>
                 <div class="col-sm-4 col-md-3 text-lg-start d-flex flex-column">
@@ -71,6 +72,7 @@
                     </ul>
                 </div>
             </div>
+                -->
             <hr>
             <div class="text-muted d-flex justify-content-between align-items-center pt-3">
                 <p class="mb-0">Copyright © 2023 MTM - Holidays</p>

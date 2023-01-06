@@ -7,7 +7,7 @@ namespace MTM_Holidays.Models
         [Key]
         public int ID { get; set; }
 
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy HH:mm}")]
         public DateTime OrderDate { get; set; } = DateTime.Now;
 
         public int CustomerID { get; set; }

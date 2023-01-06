@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MTM_Holidays.Data;
 using MTM_Holidays.Models;
 
-namespace MTM_Holidays.Pages.Orders
+namespace MTM_Holidays.Pages.CardPayments
 {
     public class DetailsModel : PageModel
     {
@@ -19,23 +19,23 @@ namespace MTM_Holidays.Pages.Orders
             _context = context;
         }
 
-      public Order Order { get; set; } = default!; 
+      public CardPayment CardPayment { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Orders == null)
+            if (id == null || _context.CardPayments == null)
             {
                 return NotFound();
             }
 
-            var order = await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);
-            if (order == null)
+            var cardpayment = await _context.CardPayments.FirstOrDefaultAsync(m => m.ID == id);
+            if (cardpayment == null)
             {
                 return NotFound();
             }
             else 
             {
-                Order = order;
+                CardPayment = cardpayment;
             }
             return Page();
         }

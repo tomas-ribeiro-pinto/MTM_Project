@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MTM_Holidays.Data;
 using MTM_Holidays.Models;
 
-namespace MTM_Holidays.Pages.Addresses
+namespace MTM_Holidays.Pages.Customers
 {
     public class DeleteModel : PageModel
     {
@@ -20,40 +20,40 @@ namespace MTM_Holidays.Pages.Addresses
         }
 
         [BindProperty]
-      public Address Address { get; set; } = default!;
+      public Customer Customer { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Addresses == null)
+            if (id == null || _context.Customers == null)
             {
                 return NotFound();
             }
 
-            var address = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == id);
+            var customer = await _context.Customers.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (address == null)
+            if (customer == null)
             {
                 return NotFound();
             }
             else 
             {
-                Address = address;
+                Customer = customer;
             }
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Addresses == null)
+            if (id == null || _context.Customers == null)
             {
                 return NotFound();
             }
-            var address = await _context.Addresses.FindAsync(id);
+            var customer = await _context.Customers.FindAsync(id);
 
-            if (address != null)
+            if (customer != null)
             {
-                Address = address;
-                _context.Addresses.Remove(Address);
+                Customer = customer;
+                _context.Customers.Remove(Customer);
                 await _context.SaveChangesAsync();
             }
 

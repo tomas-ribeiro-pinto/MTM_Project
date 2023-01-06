@@ -23,9 +23,9 @@ namespace MTM_Holidays.Pages.Orders
 
         public async Task OnGetAsync()
         {
-            if (_context.Order != null)
+            if (_context.Orders != null)
             {
-                Order = await _context.Order
+                Order = await _context.Orders
                 .Include(o => o.Customer).ToListAsync();
             }
         }

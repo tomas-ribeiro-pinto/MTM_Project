@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using MTM_Holidays.Data;
 using MTM_Holidays.Models;
 
-namespace MTM_Holidays.Pages.Addresses
+namespace MTM_Holidays.Pages.Customers
 {
     public class CreateModel : PageModel
     {
@@ -21,22 +21,24 @@ namespace MTM_Holidays.Pages.Addresses
 
         public IActionResult OnGet()
         {
+        ViewData["AddressID"] = new SelectList(_context.Addresses, "ID", "PostCode");
+        ViewData["CardPaymentID"] = new SelectList(_context.Set<CardPayment>(), "ID", "CardNumber");
             return Page();
         }
 
         [BindProperty]
-        public Address Address { get; set; } = default!;
+        public Customer Customer { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Addresses == null || Address == null)
+          if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            _context.Addresses.Add(Address);
+            _context.Customers.Add(Customer);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

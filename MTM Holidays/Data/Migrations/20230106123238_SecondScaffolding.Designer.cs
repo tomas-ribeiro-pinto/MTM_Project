@@ -11,13 +11,13 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MTM_Holidays.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230105205956_InitialModels")]
-    partial class InitialModels
+    [Migration("20230106123238_SecondScaffolding")]
+    partial class SecondScaffolding
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "6.0.6");
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.12");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -227,21 +227,18 @@ namespace MTM_Holidays.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("County")
-                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PostCode")
-                        .IsRequired()
+                        .HasMaxLength(7)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Region")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Street")
-                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
@@ -252,7 +249,7 @@ namespace MTM_Holidays.Data.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Address");
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("MTM_Holidays.Models.CardPayment", b =>
@@ -261,9 +258,10 @@ namespace MTM_Holidays.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CardNumber")
+                    b.Property<string>("CardNumber")
+                        .IsRequired()
                         .HasMaxLength(10)
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ExpiryDate")
                         .HasColumnType("TEXT");
@@ -275,7 +273,7 @@ namespace MTM_Holidays.Data.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("CardPayment");
+                    b.ToTable("CardPayments");
                 });
 
             modelBuilder.Entity("MTM_Holidays.Models.Customer", b =>
@@ -307,9 +305,9 @@ namespace MTM_Holidays.Data.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("PhoneNumber")
+                    b.Property<string>("PhoneNumber")
                         .HasMaxLength(11)
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("ID");
 
@@ -317,7 +315,7 @@ namespace MTM_Holidays.Data.Migrations
 
                     b.HasIndex("CardPaymentID");
 
-                    b.ToTable("Customer");
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("MTM_Holidays.Models.DiscountCode", b =>
@@ -345,12 +343,10 @@ namespace MTM_Holidays.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("AccommodationType")
-                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
@@ -406,7 +402,7 @@ namespace MTM_Holidays.Data.Migrations
 
                     b.HasIndex("CustomerID");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("MTM_Holidays.Models.Order_Holiday", b =>

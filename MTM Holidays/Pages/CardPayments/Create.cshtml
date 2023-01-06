@@ -1,0 +1,44 @@
+@page
+@model MTM_Holidays.Pages.CardPayments.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CardPayment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CardPayment.CardNumber" class="control-label"></label>
+                <input asp-for="CardPayment.CardNumber" class="form-control" />
+                <span asp-validation-for="CardPayment.CardNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CardPayment.SecurityCode" class="control-label"></label>
+                <input asp-for="CardPayment.SecurityCode" class="form-control" />
+                <span asp-validation-for="CardPayment.SecurityCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CardPayment.ExpiryDate" class="control-label"></label>
+                <input asp-for="CardPayment.ExpiryDate" class="form-control" />
+                <span asp-validation-for="CardPayment.ExpiryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

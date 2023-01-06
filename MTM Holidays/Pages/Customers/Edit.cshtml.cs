@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using MTM_Holidays.Data;
 using MTM_Holidays.Models;
 
-namespace MTM_Holidays.Pages.Orders
+namespace MTM_Holidays.Pages.Customers
 {
     public class EditModel : PageModel
     {
@@ -21,22 +21,23 @@ namespace MTM_Holidays.Pages.Orders
         }
 
         [BindProperty]
-        public Order Order { get; set; } = default!;
+        public Customer Customer { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Orders == null)
+            if (id == null || _context.Customers == null)
             {
                 return NotFound();
             }
 
-            var order =  await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);
-            if (order == null)
+            var customer =  await _context.Customers.FirstOrDefaultAsync(m => m.ID == id);
+            if (customer == null)
             {
                 return NotFound();
             }
-            Order = order;
-           ViewData["CustomerID"] = new SelectList(_context.Set<Customer>(), "ID", "EmailAddress");
+            Customer = customer;
+           ViewData["AddressID"] = new SelectList(_context.Addresses, "ID", "Country");
+           ViewData["CardPaymentID"] = new SelectList(_context.Set<CardPayment>(), "ID", "SecurityCode");
             return Page();
         }
 
@@ -49,7 +50,7 @@ namespace MTM_Holidays.Pages.Orders
                 return Page();
             }
 
-            _context.Attach(Order).State = EntityState.Modified;
+            _context.Attach(Customer).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +58,7 @@ namespace MTM_Holidays.Pages.Orders
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!OrderExists(Order.ID))
+                if (!CustomerExists(Customer.ID))
                 {
                     return NotFound();
                 }
@@ -70,9 +71,9 @@ namespace MTM_Holidays.Pages.Orders
             return RedirectToPage("./Index");
         }
 
-        private bool OrderExists(int id)
+        private bool CustomerExists(int id)
         {
-          return (_context.Orders?.Any(e => e.ID == id)).GetValueOrDefault();
+          return _context.Customers.Any(e => e.ID == id);
         }
     }
 }
