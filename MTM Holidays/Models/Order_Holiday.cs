@@ -40,7 +40,7 @@ namespace MTM_Holidays.Models
         public Order Order { get; set; }
 
         public int DiscountCodeID { get; set; }
-        public DiscountCode DiscountCode { get; set; } 
+        public DiscountCode DiscountCode { get; set; } = default!;
     }
 }
 

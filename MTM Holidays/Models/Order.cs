@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MTM_Holidays.Models
 {
@@ -11,8 +12,9 @@ namespace MTM_Holidays.Models
         public DateTime OrderDate { get; set; } = DateTime.Now;
 
         public int CustomerID { get; set; }
+        [ForeignKey("CustomerID")]
         public Customer Customer { get; set; }
 
-        public List<Holiday> Holidays { get; set; }
+        public List<Order_Holiday> Order_Holidays { get; set; }
     }
 }

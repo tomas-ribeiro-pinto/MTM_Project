@@ -18,6 +18,7 @@
     <None Remove="Pages\Discounts\" />
     <None Remove="Pages\Customers\" />
     <None Remove="Pages\CardPayments\" />
+    <None Remove="Pages\OrderHolidays\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\assets\bootstrap\css\bootstrap.min.css" />
@@ -99,5 +100,6 @@
     <Folder Include="Pages\Discounts\" />
     <Folder Include="Pages\Customers\" />
     <Folder Include="Pages\CardPayments\" />
+    <Folder Include="Pages\OrderHolidays\" />
   </ItemGroup>
 </Project>
