@@ -14,6 +14,7 @@ namespace MTM_Holidays.Data
 
             var discountCodes = new DiscountCode[]
             {
+                new DiscountCode{ID=0, Code="0", Discount=0.00},
                 new DiscountCode{Code="MTM", Discount=5.00},
                 new DiscountCode{Code="CO550", Discount=10.50},
                 new DiscountCode{Code="BNU2023", Discount=100.00}

@@ -3,6 +3,7 @@ using System;
 using MTM_Holidays.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MTM_Holidays.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230106185503_DatabaseMigration")]
+    partial class DatabaseMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.12");
@@ -351,6 +353,9 @@ namespace MTM_Holidays.Data.Migrations
                     b.Property<int>("DestinationAddressID")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("OrderID")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("OriginAddressID")
                         .HasColumnType("INTEGER");
 
@@ -373,6 +378,8 @@ namespace MTM_Holidays.Data.Migrations
                     b.HasKey("ID");
 
                     b.HasIndex("DestinationAddressID");
+
+                    b.HasIndex("OrderID");
 
                     b.HasIndex("OriginAddressID");
 
@@ -535,6 +542,10 @@ namespace MTM_Holidays.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("MTM_Holidays.Models.Order", null)
+                        .WithMany("Holidays")
+                        .HasForeignKey("OrderID");
+
                     b.HasOne("MTM_Holidays.Models.Address", "OriginAddress")
                         .WithMany()
                         .HasForeignKey("OriginAddressID")
@@ -572,7 +583,7 @@ namespace MTM_Holidays.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("MTM_Holidays.Models.Order", "Order")
-                        .WithMany("Order_Holidays")
+                        .WithMany()
                         .HasForeignKey("OrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -607,7 +618,7 @@ namespace MTM_Holidays.Data.Migrations
 
             modelBuilder.Entity("MTM_Holidays.Models.Order", b =>
                 {
-                    b.Navigation("Order_Holidays");
+                    b.Navigation("Holidays");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MTM_Holidays.Models;
+using static Humanizer.On;
 
 namespace MTM_Holidays.Data;
 
