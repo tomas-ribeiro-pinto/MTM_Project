@@ -15,7 +15,9 @@ namespace MTM_Holidays.Models
     /// <version>15th Dec 2022</version>
     public class Holiday
 	{
-		[Key]
+        internal object Address;
+
+        [Key]
         public int ID { get; set; }
 
 		[Required, MaxLength(30, ErrorMessage = "The field {0} is too long")]
