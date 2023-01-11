@@ -2,38 +2,35 @@
 @model MTM_Holidays.Pages.Orders.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Order - " + Model.Holiday.Title;
 }
-
-<h1>Order</h1>
 
 <div class="container">
     <div class="row g-0 justify-content-center">
-        <div class="col-md-6 offset-lg-0 d-flex mt-4 col-lg-5">
-            <div class="p-3" style="background: #0D4C73;border-top-left-radius: 1em;border-bottom-left-radius: 1em;">
+        <h1 class="text-center mt-3">Order</h1>
+        <div class="col-md-6 offset-lg-0 d-flex mt-4 col-lg-5 h-100">
+            <div class="p-3" style="background: #023E73; border-top-left-radius: 1em; border-bottom-left-radius: 1em;">
+                <p class="lead" style="color: white;font-weight: bold;"><i class="bi bi-info-circle-fill text-warning"></i>&nbsp;Holiday Details</p>
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0">Holiday Details</h5>
-                        <h5>@Model.Holiday.Title</h5>
+                        <h5 class="float-start">@Model.Holiday.Title</h5>
+                        <h5 class="float-end">@Model.Holiday.Rating<i class="bi bi-star-fill text-warning"></i></h5>
                     </div>
                     <div class="card-body">
-                        <img width="322" height="257" src="assets/img/elektra-klimi--Vss0cpydCw-unsplash.jpg">
-                        <p class="card-text">@Model.Holiday.Description Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <h4 class="text-end">Price: £ @Model.Holiday.Price ppp.</h4>
+                        <img style="width:100%; height:auto;" src="assets/img/elektra-klimi--Vss0cpydCw-unsplash.jpg">
+                        <p class="card-text mt-3">@Model.Holiday.Description</p>
+                        <p class="mt-4">Flying from: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.OriginAddress.Town<span>, @Model.Holiday.OriginAddress.Country</span></span></p>
+                        <p>Flying to: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.DestinationAddress.Town<span>, @Model.Holiday.DestinationAddress.Country</span></span></p>
+                        <p class="mt-4">Accoommodation Type: <span style="color: #0D4C73">@Model.Holiday.AccommodationType</span></p>
+                        <h4 class="text-end">Price: £ <span style="color: #F27052">@Model.Holiday.Price</span> pppd.*</h4>
+                        <p class="text-end text-muted" style="font-size:0.7em;">* Per Person Per Day</p>
                     </div>
                 </div>
-                <!--
-                <form method="post" id="form1" style="border-bottom-right-radius: 1em;border-top-right-radius: 1em;">
-                    <p class="text-light mt-2">Start Holiday Date:</p><input type="date" class="form-control" value="today"/>
-                    <p class="text-light mt-2">Nights:</p><input type="number" class="form-control" placeholder="Qty" min="1" max="8" value="1" name="nights" />
-                    <p class="text-light mt-2">Persons:</p><input type="number" class="form-control" placeholder="Qty" min="1" max="4" value="1" name="persons"/>
-                </form>
-                    -->
             </div>
         </div>
         <div class="col mt-4 col-md-6 col-lg-5">
             <div class="p-3" style="background: var(--bs-light);border-bottom-right-radius: 1em;border-top-right-radius: 1em;">
-                <p class="lead" style="color: #F27052;font-weight: bold;"><i class="far fa-user" style="font-size: 20px;"></i>&nbsp;Personal Details</p>
+                <p class="lead" style="color: #F27052; font-weight: bold; "><i class="bi bi-person-circle"></i>&nbsp;Personal Details</p>
                 <form method="post" id="form2" style="border-bottom-right-radius: 1em;border-top-right-radius: 1em;">
                     <div class="p-2 mb-4 rounded" style="border: 0.01em solid #023E73;">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -53,7 +50,7 @@
                             <span asp-validation-for="Customer.DateOfBirth" class="text-danger"></span>
                         </div>
                     </div>
-                    <p class="lead" style="color: #F27052;font-weight: bold;">&nbsp;<i class="far fa-comment-alt"></i>&nbsp;Contact Info</p>
+                    <p class="lead" style="color: #F27052;font-weight: bold;"><i class="bi bi-telephone"></i>&nbsp;Contact Info</p>
                     <div class="p-2 mb-4 rounded" style="border: 0.01em solid #023E73 ;">
                         <div class="col-6 mb-2">
                             <label class="form-label">Phone Number</label>
@@ -64,7 +61,7 @@
                         <input asp-for="Customer.EmailAddress" class="form-control" placeholder="example@example.com" />
                         <span asp-validation-for="Customer.EmailAddress" class="text-danger"></span>
                     </div>
-                    <p class="lead" style="color: #F27052;font-weight: bold;"><i class="far fa-address-card"></i>&nbsp;Billing Address</p>
+                    <p class="lead" style="color: #F27052;font-weight: bold;"><i class="bi bi-person-lines-fill"></i>>&nbsp;Billing Address</p>
                     <div class="p-2 mb-4 rounded" style="border: 0.01em solid #023E73 ;">
                         <label class="form-label">Address *</label>
                         <input class="form-control mb-1" asp-for="Address.Street" placeholder="Street">
@@ -89,14 +86,14 @@
                             </div>
                         </div>
                     </div>
-                    <p class="lead" style="color: #F27052;font-weight: bold;">Holiday Details</p>
+                    <p class="lead" style="color: #F27052;font-weight: bold;"><i class="bi bi-airplane"></i>&nbsp;Holiday Details</p>
                     <div class="p-2 mb-4 rounded" style="border: 0.01em solid #023E73 ;">
                         <label class="form-label">Start Holiday Date: *</label>
-                        <input type="date" class="form-control" value="today" asp-for="@Model.StartDate" required />
+                        <input type="date" class="form-control mb-1" value="today" asp-for="@Model.StartDate" required />
                         <label class="form-label">Nights: *</label>
-                        <input type="text" class="form-control" placeholder="Qty" min="1" max="8" value="1" asp-for="@Model.Night" required />
+                        <input type="text" class="form-control mb-1" placeholder="Qty" min="1" max="8" value="1" asp-for="@Model.Night" required />
                         <label class="form-label">Persons *</label>
-                        <input type="number" class="form-control" placeholder="Qty" min="1" max="4" value="1" asp-for="@Model.Person" required />
+                        <input type="number" class="form-control mb-1" placeholder="Qty" min="1" max="4" value="1" asp-for="@Model.Person" required />
                     </div>
                     <div>
                         <input type="hidden" asp-for="Holiday.ID" />

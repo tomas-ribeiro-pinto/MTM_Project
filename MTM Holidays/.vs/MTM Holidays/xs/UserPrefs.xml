@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{461056B8-C6BA-49DA-851F-085E84BB2622}|Default">
   <MonoDevelop.Ide.ItemProperties.MTM_220Holidays PreferredExecutionTarget="/Applications/Opera.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Orders/Index.cshtml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
     <Files>
       <File FileName="Pages/Holidays/Create.cshtml" />
       <File FileName="Pages/Orders/Create.cshtml" />
@@ -25,18 +25,28 @@
       <File FileName="Pages/Shared/_LoginPartial.cshtml" />
       <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
       <File FileName="Models/Order_Holiday.cs" />
-      <File FileName="Pages/Orders/Index.cshtml" />
+      <File FileName="Pages/Orders/Index.cshtml" Line="16" Column="71" />
       <File FileName="Pages/Customers/Create.cshtml" />
       <File FileName="Pages/Orders/Edit.cshtml" />
       <File FileName="Pages/Orders/Edit.cshtml.cs" />
-      <File FileName="Pages/Orders/Index.cshtml.cs" Line="67" Column="36" />
-      <File FileName="Program.cs" />
+      <File FileName="Pages/Orders/Index.cshtml.cs" Line="55" Column="1" />
+      <File FileName="Program.cs" Line="13" Column="67" />
       <File FileName="Pages/Orders/Delete.cshtml.cs" />
       <File FileName="Pages/Orders/Delete.cshtml" />
-      <File FileName="appsettings.json" />
+      <File FileName="appsettings.json" Line="12" Column="22" />
       <File FileName="appsettings.Development.json" />
       <File FileName="Models/Picture.cs" />
       <File FileName="Pages/Holidays/Index.cshtml" />
+      <File FileName="Data/Migrations/ApplicationDbContextModelSnapshot.cs" />
+      <File FileName="Pages/Error.cshtml.cs" />
+      <File FileName="Pages/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Pages/Orders/IndexCopy.cshtml" />
+      <File FileName="wwwroot/js/site.js" />
+      <File FileName="Pages/FAQ.cshtml" />
+      <File FileName="Pages/Checkout.cshtml" Line="44" Column="22" />
+      <File FileName="Pages/Checkout.cshtml.cs" />
+      <File FileName="Pages/Orders/Details.cshtml" Line="21" Column="53" />
+      <File FileName="Pages/Orders/Details.cshtml.cs" Line="24" Column="60" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -54,27 +64,19 @@
               </Node>
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="Addresses" expanded="True" />
-                <Node name="CardPayments" expanded="True">
-                  <Node name="Create.cshtml" expanded="True" />
-                </Node>
-                <Node name="Customers" expanded="True">
-                  <Node name="Create.cshtml" expanded="True" />
-                </Node>
                 <Node name="Holidays" expanded="True" />
                 <Node name="Orders" expanded="True">
-                  <Node name="Create.cshtml" expanded="True" />
-                  <Node name="Delete.cshtml" expanded="True" />
-                  <Node name="Edit.cshtml" expanded="True" />
+                  <Node name="Details.cshtml" expanded="True" />
                   <Node name="Index.cshtml" expanded="True" />
-                  <Node name="IndexCopy.cshtml" expanded="True" />
                 </Node>
                 <Node name="Shared" expanded="True" />
+                <Node name="Checkout.cshtml" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="assets" selected="True" />
+                <Node name="assets" expanded="True" />
+                <Node name="js" expanded="True" />
               </Node>
-              <Node name="appsettings.json" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
@@ -85,9 +87,6 @@
     <BreakpointStore>
       <Breakpoint file="/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Customers/Create.cshtml.cs" relfile="Pages/Customers/Create.cshtml.cs" line="41" column="1" />
       <Breakpoint file="/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Customers/Create.cshtml.cs" relfile="Pages/Customers/Create.cshtml.cs" line="42" column="1" />
-      <Breakpoint file="/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Orders/Index.cshtml.cs" relfile="Pages/Orders/Index.cshtml.cs" line="67" column="1" />
-      <Breakpoint file="/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Orders/Index.cshtml.cs" relfile="Pages/Orders/Index.cshtml.cs" line="70" column="1" />
-      <Breakpoint file="/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Orders/Index.cshtml.cs" relfile="Pages/Orders/Index.cshtml.cs" line="68" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

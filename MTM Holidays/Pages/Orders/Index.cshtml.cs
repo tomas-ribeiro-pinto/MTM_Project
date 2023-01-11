@@ -64,7 +64,19 @@ namespace MTM_Holidays.Pages.Orders
             {
                 return NotFound();
             }
+            var originAddress = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == holiday.OriginAddressID);
+            if (originAddress == null)
+            {
+                return NotFound();
+            }
+            var destinationAddress = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == holiday.DestinationAddressID);
+            if (destinationAddress == null)
+            {
+                return NotFound();
+            }
             Holiday = holiday;
+            Holiday.OriginAddress = originAddress;
+            Holiday.DestinationAddress = destinationAddress;
             return Page();
         }
 
@@ -82,9 +94,9 @@ namespace MTM_Holidays.Pages.Orders
             AddOrderInfo();
 
             // Saves the data to the database
-            await _context.SaveChangesAsync();
+            //await _context.SaveChangesAsync();
 
-            return RedirectToPage("./IndexCopy");
+            return RedirectToPage("~/Checkout?id=" + Order.ID);
         }
 
         /// <summary>

@@ -34,10 +34,10 @@ namespace MTM_Holidays.Models
         public DateTime EndDate { get; set; } = DateTime.Now;
 
         public int HolidayID { get; set; }
-        public Holiday Holiday { get; set; }
+        public virtual Holiday Holiday { get; set; }
 
         public int OrderID { get; set; }
-        public Order Order { get; set; }
+        public virtual Order Order { get; set; }
 
         public int DiscountCodeID { get; set; }
         public DiscountCode DiscountCode { get; set; } = default!;
