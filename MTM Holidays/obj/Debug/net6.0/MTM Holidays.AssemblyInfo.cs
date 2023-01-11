@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-MTM_Holidays-357081a3-b7a9-4fde-ab39-b4d6364e6a0e")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MTM Holidays")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
