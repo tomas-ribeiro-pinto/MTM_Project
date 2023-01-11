@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\MTM Holidays.csproj": {}
+    "/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/MTM Holidays.csproj": {}
   },
   "projects": {
-    "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\MTM Holidays.csproj": {
+    "/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/MTM Holidays.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\MTM Holidays.csproj",
+        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/MTM Holidays.csproj",
         "projectName": "MTM Holidays",
-        "projectPath": "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\MTM Holidays.csproj",
-        "packagesPath": "C:\\Users\\milen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\obj\\",
+        "projectPath": "/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/MTM Holidays.csproj",
+        "packagesPath": "/Users/tomaspinto/.nuget/packages/",
+        "outputPath": "/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\milen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/tomaspinto/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/x64/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,8 +80,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -94,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
         }
       }
     }
