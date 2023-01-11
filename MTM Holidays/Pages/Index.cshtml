@@ -4,6 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
+
 <header class="pt-5">
     <div class="container pt-4 pt-xl-5">
         <div class="row pt-5">
@@ -17,64 +18,193 @@
                         <div class="shadow-lg mb-3"><button class="btn btn-primary" type="submit" style="background: rgb(2,62,115);">Search</button></div>
                         <div class="col-12 col-lg-10 d-inline-block float-end mx-auto">
                             <div class="text-center position-relative"></div>
-                        </div>
+                 </div>
                     </form>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-8 text-center text-md-start mx-auto mt-4" style="color: var(--bs-white);">
-                <div class="text-center">
-                    <h2 class="fw-bold mt-4" style="margin: 0;margin-bottom: 0;color: #000000;">Our&nbsp;<span style="color: rgb(242,113,82);">top</span>&nbsp;choice...</h2>
-                    <hr style="color: #567b92;">
-                </div>
-            </div>
-        </div>
-    </div>
+
+             </div>
+         </div>
+      </div>
+      </div>
+
 </header>
-<section>
-    <div class="container py-4 py-xl-5">
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-            <div class="col">
-                <div class="card border-light border-1 d-flex justify-content-center p-4">
-                    <div class="card-body">
-                        <div>
-                            <h4 class="fw-bold">Ibiza, Spain&nbsp;<span>🇪🇸</span></h4><img width="234" height="225" src="assets/img/slow-ibiza-zImMn5pyLXc-unsplash.jpg">
-                        </div><a class="btn btn-sm float-end px-0 mt-2" type="button" href="/orders?id=2">
-                            Book a holiday&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                            </svg><br>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border-light border-1 d-flex justify-content-center p-4">
-                    <div class="card-body">
-                        <div>
-                            <h4 class="fw-bold">Bondi Beach, Australia&nbsp;<span>🇦🇺</span></h4>
-                        </div><img width="234" height="225" src="assets/img/jay-wennington-BM9Pngg6hAc-unsplash.jpg"><button class="btn btn-sm float-end px-0 mt-2" type="button">
-                            Book a holiday&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                            </svg><br>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border-light border-1 d-flex justify-content-center p-4">
-                    <div class="card-body">
-                        <div>
-                            <h4 class="fw-bold">Navagio, Greece&nbsp;<span>🇬🇷</span></h4>
-                        </div><img width="234" height="225" src="assets/img/elektra-klimi--Vss0cpydCw-unsplash.jpg"><button class="btn btn-sm float-end px-0 mt-2" type="button">
-                            Book a holiday&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                            </svg><br>
-                        </button>
-                    </div>
-                </div>
-            </div>
+
+
+<br /><br />
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel" style="position:relative;">
+
+ 
+    <div class="carousel-indicators" style="position:relative;">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="6"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="7"></button>
+    </div>
+
+ 
+    <div class="carousel-inner" >
+        <div class="carousel-item active" style="left:157px">
+            <img src="~/assets/img/beach.jpg" alt="photo1" class="d-block" style="left:350px; width:800px; height:500px;">
+        </div>
+        <div class="carousel-item" style="left:157px">
+            <img src="~/assets/img/chill.jpg" alt="photo2" class="d-block" style="left:350px; width:800px; height:500px;">
+        </div>
+        <div class="carousel-item" style="left:157px">
+            <img src="~/assets/img/resort.jpg" alt="photo3" class="d-block" style="left:350px; width:800px; height:500px;">
+        </div>
+        <div class="carousel-item" style="left:157px">
+            <img src="~/assets/img/bluewater.jpg" alt="photo4" class="d-block" style="left:350px; width:800px; height:500px;">
+        </div>
+        <div class="carousel-item" style="left:157px">
+            <img src="~/assets/img/people.jpg" alt="photo5" class="d-block" style="left:350px; width:800px; height:500px;">
+        </div>
+        <div class="carousel-item" style="left:157px">
+            <img src="~/assets/img/family.jpg" alt="photo6" class="d-block" style="left:350px; width:800px; height:500px;">
+        </div>
+        <div class="carousel-item" style="left:157px">
+            <img src="~/assets/img/activity.jpg" alt="photo7" class="d-block" style="left:350px; width:800px; height:500px;">
         </div>
     </div>
-</section>
+
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" style="left:130px;">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" style="right:130px;">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+    
+    <br /><br />
+    
+
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Start Your Journey 👋 </h1>
+            <p class="lead text-muted">The most searched destinations this month ⬇️ </p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img src="~/assets/img/ibiza.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
+                        <div class="card-body">
+                        <h4 class="card-text">Ibiza, Spain </h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img src="~/assets/img/bondi.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
+                    <div class="card-body">
+                        <h4 class="card-text">Bondi Beach, Australia</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img src="~/assets/img/navagio.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
+                    <div class="card-body">
+                        <h4 class="card-text">Navagio Beach, Greece</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img src="~/assets/img/antalaya.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
+                    <div class="card-body">
+                        <h4 class="card-text">Antalaya Beach, Turkey</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img src="~/assets/img/tailand.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
+                    <div class="card-body">
+                        <h4 class="card-text">Phuket, Tailand</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img src="~/assets/img/santorini.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
+                    <div class="card-body">
+                        <h4 class="card-text">Santorini Beach, Greece</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        
+        
+   
+    </div>
+<div class="button" style="right:150px;position:absolute; padding:right;">
+<p>
+        <a href="#" class="btn btn-primary my-4" style="left:100px;right:100px; align:center;background-color: rgb(2, 62, 115)">All holiday offers</a>
+    </p>
+</div>
+<br /><br />
+
 <section>
     <div class="container py-4 py-xl-5">
         <div class="row">
@@ -139,6 +269,19 @@
                 <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="assets/img/illustrations/harshil-gudka-77zGnfU_SFU-unsplash.jpg"></div>
             </div>
         </div>
+    </div>
+</section>
+
+
+<section class="py-4 py-xl-5">
+    <div class="container">
+        <div style="background-color: #a7e4f2;" class="text-white border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
+            <div class="pb-2 pb-lg-1">
+                <h2 class="fw-bold mb-2" style="color:rgb(2, 62, 115) ; padding:right;">Discounts 10-30% off 💰 </h2>
+                <p class="mb-0" style="color:black;" >With further cooperation with us, You can receive up to 10-30% discount for the next trips on our website,
+            depending on the length of cooperation with us and the value of the orders. Thank You for using our services.</p>
+            </div>
+           
     </div>
 </section>
 <section class="py-4 py-xl-5">
