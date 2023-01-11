@@ -15,8 +15,6 @@ namespace MTM_Holidays.Models
     /// <version>15th Dec 2022</version>
     public class Holiday
 	{
-        internal object Address;
-
         [Key]
         public int ID { get; set; }
 
