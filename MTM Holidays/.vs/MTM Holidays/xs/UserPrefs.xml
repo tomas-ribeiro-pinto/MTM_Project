@@ -8,7 +8,7 @@
       <File FileName="Pages/Addresses/Create.cshtml" />
       <File FileName="Models/Address.cs" />
       <File FileName="Models/Holiday.cs" />
-      <File FileName="Pages/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Shared/_Layout.cshtml" />
       <File FileName="Pages/Index.cshtml" />
       <File FileName="MTM Holidays.csproj" />
       <File FileName="Pages/Holidays/Create.cshtml.cs" />
@@ -25,7 +25,7 @@
       <File FileName="Pages/Shared/_LoginPartial.cshtml" />
       <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
       <File FileName="Models/Order_Holiday.cs" />
-      <File FileName="Pages/Orders/Index.cshtml" Line="64" Column="118" />
+      <File FileName="Pages/Orders/Index.cshtml" />
       <File FileName="Pages/Customers/Create.cshtml" />
       <File FileName="Pages/Orders/Edit.cshtml" />
       <File FileName="Pages/Orders/Edit.cshtml.cs" />
@@ -33,7 +33,7 @@
       <File FileName="Program.cs" Line="14" Column="55" />
       <File FileName="Pages/Orders/Delete.cshtml.cs" />
       <File FileName="Pages/Orders/Delete.cshtml" />
-      <File FileName="appsettings.json" Line="12" Column="22" />
+      <File FileName="appsettings.json" />
       <File FileName="appsettings.Development.json" />
       <File FileName="Models/Picture.cs" />
       <File FileName="Pages/Holidays/Index.cshtml" />
@@ -47,7 +47,7 @@
       <File FileName="Pages/Checkout.cshtml.cs" />
       <File FileName="Pages/Orders/Details.cshtml" />
       <File FileName="Pages/Orders/Details.cshtml.cs" />
-      <File FileName="wwwroot/css/site.css" Line="1" Column="4" />
+      <File FileName="wwwroot/css/site.css" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
