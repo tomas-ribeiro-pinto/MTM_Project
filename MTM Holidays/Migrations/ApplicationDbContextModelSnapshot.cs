@@ -3,18 +3,16 @@ using System;
 using MTM_Holidays.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace MTM_Holidays.Data.Migrations
+namespace MTM_Holidays.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230109093158_FKorder")]
-    partial class FKorder
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.12");
@@ -227,18 +225,22 @@ namespace MTM_Holidays.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("County")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PostCode")
+                        .IsRequired()
                         .HasMaxLength(7)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Region")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Street")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
@@ -285,9 +287,6 @@ namespace MTM_Holidays.Data.Migrations
                     b.Property<int>("AddressID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CardPaymentID")
-                        .HasColumnType("INTEGER");
-
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("TEXT");
 
@@ -306,14 +305,13 @@ namespace MTM_Holidays.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasMaxLength(11)
                         .HasColumnType("TEXT");
 
                     b.HasKey("ID");
 
                     b.HasIndex("AddressID");
-
-                    b.HasIndex("CardPaymentID");
 
                     b.ToTable("Customers");
                 });
@@ -343,10 +341,12 @@ namespace MTM_Holidays.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("AccommodationType")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
@@ -387,7 +387,16 @@ namespace MTM_Holidays.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("CardPaymentID")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("CustomerID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("DiscountCodeID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsPaid")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("OrderDate")
@@ -395,7 +404,11 @@ namespace MTM_Holidays.Data.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("CardPaymentID");
+
                     b.HasIndex("CustomerID");
+
+                    b.HasIndex("DiscountCodeID");
 
                     b.ToTable("Orders");
                 });
@@ -406,30 +419,25 @@ namespace MTM_Holidays.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("Discount")
-                        .HasColumnType("REAL");
-
-                    b.Property<int>("DiscountCodeID")
-                        .HasColumnType("INTEGER");
-
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("HolidayID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("IsPaid")
+                    b.Property<int>("Night")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("OrderID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantity")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("DiscountCodeID");
 
                     b.HasIndex("HolidayID");
 
@@ -518,15 +526,7 @@ namespace MTM_Holidays.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MTM_Holidays.Models.CardPayment", "CardPayment")
-                        .WithMany()
-                        .HasForeignKey("CardPaymentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Address");
-
-                    b.Navigation("CardPayment");
                 });
 
             modelBuilder.Entity("MTM_Holidays.Models.Holiday", b =>
@@ -550,23 +550,29 @@ namespace MTM_Holidays.Data.Migrations
 
             modelBuilder.Entity("MTM_Holidays.Models.Order", b =>
                 {
+                    b.HasOne("MTM_Holidays.Models.CardPayment", "CardPayment")
+                        .WithMany()
+                        .HasForeignKey("CardPaymentID");
+
                     b.HasOne("MTM_Holidays.Models.Customer", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("MTM_Holidays.Models.DiscountCode", "DiscountCode")
+                        .WithMany()
+                        .HasForeignKey("DiscountCodeID");
+
+                    b.Navigation("CardPayment");
+
                     b.Navigation("Customer");
+
+                    b.Navigation("DiscountCode");
                 });
 
             modelBuilder.Entity("MTM_Holidays.Models.Order_Holiday", b =>
                 {
-                    b.HasOne("MTM_Holidays.Models.DiscountCode", "DiscountCode")
-                        .WithMany()
-                        .HasForeignKey("DiscountCodeID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("MTM_Holidays.Models.Holiday", "Holiday")
                         .WithMany()
                         .HasForeignKey("HolidayID")
@@ -578,8 +584,6 @@ namespace MTM_Holidays.Data.Migrations
                         .HasForeignKey("OrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("DiscountCode");
 
                     b.Navigation("Holiday");
 

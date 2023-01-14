@@ -19,7 +19,7 @@ namespace MTM_Holidays.Pages.Holidays
             _context = context;
         }
 
-      public Holiday Holiday { get; set; } = default!; 
+      public Holiday Holiday { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

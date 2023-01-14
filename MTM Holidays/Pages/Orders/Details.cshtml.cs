@@ -19,7 +19,7 @@ namespace MTM_Holidays.Pages.Orders
             _context = context;
         }
 
-      public Order Order { get; set; } = default!; 
+      public Order Order { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

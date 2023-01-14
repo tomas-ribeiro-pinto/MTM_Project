@@ -21,14 +21,13 @@ namespace MTM_Holidays.Pages.Customers
 
         public IActionResult OnGet()
         {
-        ViewData["AddressID"] = new SelectList(_context.Addresses, "ID", "PostCode");
-        ViewData["CardPaymentID"] = new SelectList(_context.Set<CardPayment>(), "ID", "CardNumber");
+        ViewData["AddressID"] = new SelectList(_context.Addresses, "ID", "Country");
             return Page();
         }
 
         [BindProperty]
-        public Customer Customer { get; set; }
-        
+        public Customer Customer { get; set; } = default!;
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

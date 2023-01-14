@@ -21,18 +21,20 @@ namespace MTM_Holidays.Pages.Orders
 
         public IActionResult OnGet()
         {
-        ViewData["CustomerID"] = new SelectList(_context.Set<Customer>(), "ID", "FirstName");
+        ViewData["CardPaymentID"] = new SelectList(_context.CardPayments, "ID", "CardNumber");
+        ViewData["CustomerID"] = new SelectList(_context.Customers, "ID", "EmailAddress");
+        ViewData["DiscountCodeID"] = new SelectList(_context.DiscountCodes, "ID", "Code");
             return Page();
         }
 
         [BindProperty]
         public Order Order { get; set; } = default!;
-        
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Orders == null || Order == null)
+          if (!ModelState.IsValid)
             {
                 return Page();
             }

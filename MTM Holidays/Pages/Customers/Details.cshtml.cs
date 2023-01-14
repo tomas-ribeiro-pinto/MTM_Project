@@ -19,7 +19,7 @@ namespace MTM_Holidays.Pages.Customers
             _context = context;
         }
 
-      public Customer Customer { get; set; }
+      public Customer Customer { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

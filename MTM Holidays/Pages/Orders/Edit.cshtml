@@ -25,6 +25,21 @@
                 <span asp-validation-for="Order.CustomerID" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Order.CardPaymentID" class="control-label"></label>
+                <select asp-for="Order.CardPaymentID" class="form-control" asp-items="ViewBag.CardPaymentID"></select>
+                <span asp-validation-for="Order.CardPaymentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.DiscountCodeID" class="control-label"></label>
+                <select asp-for="Order.DiscountCodeID" class="form-control" asp-items="ViewBag.DiscountCodeID"></select>
+                <span asp-validation-for="Order.DiscountCodeID" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Order.IsPaid" /> @Html.DisplayNameFor(model => model.Order.IsPaid)
+                </label>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
