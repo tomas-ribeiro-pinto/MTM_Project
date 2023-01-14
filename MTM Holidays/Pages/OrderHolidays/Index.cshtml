@@ -1,4 +1,3 @@
-
 @page
 @model MTM_Holidays.Pages.OrderHolidays.IndexModel
 
@@ -15,10 +14,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Order_Holiday[0].Discount)
+                @Html.DisplayNameFor(model => model.Order_Holiday[0].Quantity)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Order_Holiday[0].IsPaid)
+                @Html.DisplayNameFor(model => model.Order_Holiday[0].Night)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Order_Holiday[0].StartDate)
@@ -32,9 +31,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Order_Holiday[0].Order)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order_Holiday[0].DiscountCode)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -42,10 +38,10 @@
 @foreach (var item in Model.Order_Holiday) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Discount)
+                @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsPaid)
+                @Html.DisplayFor(modelItem => item.Night)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.StartDate)
@@ -58,9 +54,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Order.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiscountCode.Code)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

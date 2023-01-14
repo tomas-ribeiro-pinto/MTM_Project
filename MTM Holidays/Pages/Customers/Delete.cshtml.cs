@@ -20,7 +20,7 @@ namespace MTM_Holidays.Pages.Customers
         }
 
         [BindProperty]
-      public Customer Customer { get; set; }
+      public Customer Customer { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

@@ -21,7 +21,7 @@ namespace MTM_Holidays.Models
         public string URL { get; set; } = String.Empty;
 
         public int HolidayID { get; set; }
-        public Holiday Holiday { get; set; }
+        public Holiday Holiday { get; set; } = default!;
 
     }
 }

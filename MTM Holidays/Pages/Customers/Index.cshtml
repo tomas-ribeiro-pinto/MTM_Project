@@ -31,9 +31,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].Address)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CardPayment)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -57,9 +54,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Address.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CardPayment.SecurityCode)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

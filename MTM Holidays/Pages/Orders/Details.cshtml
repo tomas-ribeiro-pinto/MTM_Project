@@ -2,7 +2,7 @@
 @model MTM_Holidays.Pages.Orders.DetailsModel
 
 @{
-    ViewData["Title"] = " Holiday Details";
+    ViewData["Title"] = "Details";
 }
 
 <h1>Details</h1>
@@ -22,6 +22,24 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Order.Customer.EmailAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.CardPayment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.CardPayment.CardNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.DiscountCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.DiscountCode.Code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.IsPaid)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.IsPaid)
         </dd>
     </dl>
 </div>

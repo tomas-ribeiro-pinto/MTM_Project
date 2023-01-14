@@ -19,7 +19,7 @@ namespace MTM_Holidays.Pages.CardPayments
             _context = context;
         }
 
-      public CardPayment CardPayment { get; set; }
+      public CardPayment CardPayment { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

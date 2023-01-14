@@ -37,7 +37,6 @@ namespace MTM_Holidays.Pages.Customers
             }
             Customer = customer;
            ViewData["AddressID"] = new SelectList(_context.Addresses, "ID", "Country");
-           ViewData["CardPaymentID"] = new SelectList(_context.Set<CardPayment>(), "ID", "SecurityCode");
             return Page();
         }
 

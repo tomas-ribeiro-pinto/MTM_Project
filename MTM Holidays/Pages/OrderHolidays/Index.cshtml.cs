@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +26,6 @@ namespace MTM_Holidays.Pages.OrderHolidays
             if (_context.Order_Holidays != null)
             {
                 Order_Holiday = await _context.Order_Holidays
-                .Include(o => o.DiscountCode)
                 .Include(o => o.Holiday)
                 .Include(o => o.Order).ToListAsync();
             }

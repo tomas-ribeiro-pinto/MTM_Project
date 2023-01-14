@@ -1,4 +1,3 @@
-
 @page
 @model MTM_Holidays.Pages.OrderHolidays.EditModel
 
@@ -16,14 +15,14 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Order_Holiday.ID" />
             <div class="form-group">
-                <label asp-for="Order_Holiday.Discount" class="control-label"></label>
-                <input asp-for="Order_Holiday.Discount" class="form-control" />
-                <span asp-validation-for="Order_Holiday.Discount" class="text-danger"></span>
+                <label asp-for="Order_Holiday.Quantity" class="control-label"></label>
+                <input asp-for="Order_Holiday.Quantity" class="form-control" />
+                <span asp-validation-for="Order_Holiday.Quantity" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Order_Holiday.IsPaid" /> @Html.DisplayNameFor(model => model.Order_Holiday.IsPaid)
-                </label>
+            <div class="form-group">
+                <label asp-for="Order_Holiday.Night" class="control-label"></label>
+                <input asp-for="Order_Holiday.Night" class="form-control" />
+                <span asp-validation-for="Order_Holiday.Night" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Order_Holiday.StartDate" class="control-label"></label>
@@ -44,11 +43,6 @@
                 <label asp-for="Order_Holiday.OrderID" class="control-label"></label>
                 <select asp-for="Order_Holiday.OrderID" class="form-control" asp-items="ViewBag.OrderID"></select>
                 <span asp-validation-for="Order_Holiday.OrderID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Order_Holiday.DiscountCodeID" class="control-label"></label>
-                <select asp-for="Order_Holiday.DiscountCodeID" class="form-control" asp-items="ViewBag.DiscountCodeID"></select>
-                <span asp-validation-for="Order_Holiday.DiscountCodeID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

@@ -12,13 +12,13 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
 
-    public DbSet<Holiday> Holidays { get; set; }
-    public DbSet<Order_Holiday> Order_Holidays { get; set; }
-    public DbSet<Picture> Pictures { get; set; }
-    public DbSet<DiscountCode> DiscountCodes { get; set; }
-    public DbSet<Address> Addresses { get; set; }
-    public DbSet<Order> Orders { get; set; }
-    public DbSet<Customer> Customers { get; set; }
-    public DbSet<CardPayment> CardPayments { get; set; }
+    public DbSet<Holiday> Holidays { get; set; } = default!;
+    public DbSet<Order_Holiday> Order_Holidays { get; set; } = default!;
+    public DbSet<Picture> Pictures { get; set; } = default!;
+    public DbSet<DiscountCode> DiscountCodes { get; set; } = default!;
+    public DbSet<Address> Addresses { get; set; } = default!;
+    public DbSet<Order> Orders { get; set; } = default!;
+    public DbSet<Customer> Customers { get; set; } = default!;
+    public DbSet<CardPayment> CardPayments { get; set; } = default!;
 }
 
