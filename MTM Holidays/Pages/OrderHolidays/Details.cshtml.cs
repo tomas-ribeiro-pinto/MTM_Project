@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +19,7 @@ namespace MTM_Holidays.Pages.OrderHolidays
             _context = context;
         }
 
-      public Order_Holiday Order_Holiday { get; set; }
+      public Order_Holiday Order_Holiday { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -42,4 +41,3 @@ namespace MTM_Holidays.Pages.OrderHolidays
         }
     }
 }
-

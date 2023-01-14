@@ -26,8 +26,7 @@ namespace MTM_Holidays.Pages.Customers
             if (_context.Customers != null)
             {
                 Customer = await _context.Customers
-                .Include(c => c.Address)
-                .Include(c => c.CardPayment).ToListAsync();
+                .Include(c => c.Address).ToListAsync();
             }
         }
     }

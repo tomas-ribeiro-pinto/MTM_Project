@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +36,6 @@ namespace MTM_Holidays.Pages.OrderHolidays
                 return NotFound();
             }
             Order_Holiday = order_holiday;
-           ViewData["DiscountCodeID"] = new SelectList(_context.DiscountCodes, "ID", "Code");
            ViewData["HolidayID"] = new SelectList(_context.Holidays, "ID", "Region");
            ViewData["OrderID"] = new SelectList(_context.Orders, "ID", "ID");
             return Page();

@@ -25,8 +25,8 @@ namespace MTM_Holidays.Pages.CardPayments
         }
 
         [BindProperty]
-        public CardPayment CardPayment { get; set; }
-        
+        public CardPayment CardPayment { get; set; } = default!;
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

@@ -21,19 +21,19 @@ namespace MTM_Holidays.Pages.Holidays
 
         public IActionResult OnGet()
         {
-        ViewData["DestinationAddressID"] = new SelectList(_context.Addresses, "ID", "Town");
-        ViewData["OriginAddressID"] = new SelectList(_context.Addresses, "ID", "Town");
+        ViewData["DestinationAddressID"] = new SelectList(_context.Addresses, "ID", "Country");
+        ViewData["OriginAddressID"] = new SelectList(_context.Addresses, "ID", "Country");
             return Page();
         }
 
         [BindProperty]
         public Holiday Holiday { get; set; } = default!;
-        
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Holidays == null || Holiday == null)
+          if (!ModelState.IsValid)
             {
                 return Page();
             }

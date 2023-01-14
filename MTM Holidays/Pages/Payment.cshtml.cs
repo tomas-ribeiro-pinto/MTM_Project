@@ -10,17 +10,20 @@ using MTM_Holidays.Models;
 
 namespace MTM_Holidays.Pages
 {
-    public class CheckoutModel : PageModel
+    public class PaymentModel : PageModel
     {
         private readonly MTM_Holidays.Data.ApplicationDbContext _context;
 
-        public CheckoutModel(MTM_Holidays.Data.ApplicationDbContext context)
+        public PaymentModel(MTM_Holidays.Data.ApplicationDbContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public Order Order { get; set; } = default!;
+        public Order Order { get; set; }
+
+        [BindProperty]
+        public CardPayment CardPayment { get; set; } = default!;
 
         [BindProperty]
         public string DiscountCode { get; set; }
@@ -49,41 +52,64 @@ namespace MTM_Holidays.Pages
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (!String.IsNullOrEmpty(DiscountCode))
-            {
-                var order = GetOrderAsync((int)id).Result;
-                var discount = await _context.DiscountCodes.FirstOrDefaultAsync(m => m.Code == DiscountCode);
+            Order = GetOrderAsync((int)id).Result;
+            var expiryDate = CardPayment.ExpiryDate.Date;
+            var today = DateTime.Today;
 
-                if (discount == null)
+            if (!ModelState.IsValid || _context.Holidays == null || Order == null
+            || CardPayment == null)
+            {
+                //return page with this order ID
+                return await OnGetAsync(Order.ID);
+            }
+            else if (expiryDate <= today && !(expiryDate.Month == today.Month && expiryDate.Year == today.Year))
+            {
+                ModelState.AddModelError("CardPayment.ExpiryDate", "Expired Date invalid! Please input a greater value.");
+                return await OnGetAsync(Order.ID);
+            }
+
+            var cardNumber = CardPayment.CardNumber;
+            var securityCode = CardPayment.SecurityCode;
+
+            // Check that only numbers are input by the user for card number and security code
+            foreach (char c in cardNumber)
+            {
+                if (!Char.IsDigit(c))
                 {
-                    ViewData["DiscountError"] = $"The code '{DiscountCode}' is invalid!";
+                    ModelState.AddModelError("CardPayment.CardNumber", "Please input a valid number.");
+                    return await OnGetAsync(Order.ID);
                 }
-                else if (order.DiscountCodeID == discount.ID)
+            }
+            foreach (char c in securityCode)
+            {
+                if(!Char.IsDigit(c))
                 {
-                    ViewData["DiscountError"] = $"The code '{DiscountCode}' is already applied. You may only use one code per order!";
+                    ModelState.AddModelError("CardPayment.SecurityCode", "Please input a valid number.");
+                    return await OnGetAsync(Order.ID);
+                }
+            }
+
+            Order.CardPayment = CardPayment;
+            Order.IsPaid = true;
+
+            _context.Attach(Order).State = EntityState.Modified;
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!OrderExists(Order.ID))
+                {
+                    return NotFound();
                 }
                 else
                 {
-                    order.DiscountCode = discount;
-                    _context.Attach(order).State = EntityState.Modified;
-                    try
-                    {
-                        await _context.SaveChangesAsync();
-                    }
-                    catch (DbUpdateConcurrencyException)
-                    {
-                        if (!OrderExists(order.ID))
-                        {
-                            return NotFound();
-                        }
-                        else
-                        {
-                            throw;
-                        }
-                    }
+                    throw;
                 }
             }
-            return await OnGetAsync(Order.ID);
+
+            return RedirectToPage("Index");
         }
 
         public double CalculateTotal()
@@ -133,19 +159,6 @@ namespace MTM_Holidays.Pages
 
             return order;
 
-        }
-
-        public async Task<IActionResult> OnGetRemoveDiscount(int? id)
-        {
-            var order = GetOrderAsync((int)id).Result;
-
-            order.DiscountCode = null;
-            order.DiscountCodeID = null;
-
-            _context.Attach(order).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return await OnGetAsync(order.ID);
         }
     }
 }

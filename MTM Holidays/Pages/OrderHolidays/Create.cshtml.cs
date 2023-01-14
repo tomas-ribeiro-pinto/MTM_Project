@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,15 +21,14 @@ namespace MTM_Holidays.Pages.OrderHolidays
 
         public IActionResult OnGet()
         {
-        ViewData["DiscountCodeID"] = new SelectList(_context.DiscountCodes, "ID", "Code");
         ViewData["HolidayID"] = new SelectList(_context.Holidays, "ID", "Region");
         ViewData["OrderID"] = new SelectList(_context.Orders, "ID", "ID");
             return Page();
         }
 
         [BindProperty]
-        public Order_Holiday Order_Holiday { get; set; }
-        
+        public Order_Holiday Order_Holiday { get; set; } = default!;
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -47,4 +45,3 @@ namespace MTM_Holidays.Pages.OrderHolidays
         }
     }
 }
-

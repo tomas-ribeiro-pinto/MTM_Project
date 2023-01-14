@@ -73,7 +73,7 @@ namespace MTM_Holidays.Pages.Holidays
 
         private bool HolidayExists(int id)
         {
-          return (_context.Holidays?.Any(e => e.ID == id)).GetValueOrDefault();
+          return _context.Holidays.Any(e => e.ID == id);
         }
     }
 }

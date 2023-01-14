@@ -18,7 +18,7 @@ namespace MTM_Holidays.Models
         [Key]
         public int ID { get; set; }
 
-		[Required, MaxLength(30, ErrorMessage = "The field {0} is too long")]
+		[Required, MaxLength(40, ErrorMessage = "The field {0} is too long")]
 		public string Title { get; set; } = String.Empty;
 
 		[MaxLength(100)]
@@ -40,12 +40,12 @@ namespace MTM_Holidays.Models
 		public string AccommodationType { get; set; } = String.Empty;
 
 		public int OriginAddressID { get; set; }
-		public Address OriginAddress { get; set; }
+		public Address OriginAddress { get; set; } = default!;
 
         public int DestinationAddressID { get; set; }
-        public Address DestinationAddress { get; set; }
+        public Address DestinationAddress { get; set; } = default!;
 
-        public List<Picture> Pictures { get; set; }
+        public List<Picture> Pictures { get; set; } = default!;
     }
 }
 

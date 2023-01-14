@@ -36,7 +36,9 @@ namespace MTM_Holidays.Pages.Orders
                 return NotFound();
             }
             Order = order;
-           ViewData["CustomerID"] = new SelectList(_context.Set<Customer>(), "ID", "EmailAddress");
+           ViewData["CardPaymentID"] = new SelectList(_context.CardPayments, "ID", "CardNumber");
+           ViewData["CustomerID"] = new SelectList(_context.Customers, "ID", "EmailAddress");
+           ViewData["DiscountCodeID"] = new SelectList(_context.DiscountCodes, "ID", "Code");
             return Page();
         }
 
@@ -72,7 +74,7 @@ namespace MTM_Holidays.Pages.Orders
 
         private bool OrderExists(int id)
         {
-          return (_context.Orders?.Any(e => e.ID == id)).GetValueOrDefault();
+          return _context.Orders.Any(e => e.ID == id);
         }
     }
 }

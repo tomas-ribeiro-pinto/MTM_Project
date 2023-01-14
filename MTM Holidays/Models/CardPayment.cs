@@ -18,11 +18,11 @@ namespace MTM_Holidays.Models
 
         [Required, MaxLength(16), MinLength(16, ErrorMessage = "The field {0} must be 10 characters long")]
         [DataType(DataType.CreditCard)]
-        public string CardNumber { get; set; }
+        public string CardNumber { get; set; } = string.Empty;
 
 
         [Required, MinLength(3, ErrorMessage = "The field {0} must be {1} characters long"), MaxLength(3)]
-        public string SecurityCode { get; set; }
+        public string SecurityCode { get; set; } = string.Empty;
 
 
         [Required, DataType(DataType.DateTime, ErrorMessage = "Invalid Date Format")]
