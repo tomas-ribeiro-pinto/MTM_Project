@@ -58,9 +58,9 @@ namespace MTM_Holidays.Pages
                 {
                     ViewData["DiscountError"] = $"The code '{DiscountCode}' is invalid!";
                 }
-                else if (order.DiscountCodeID == discount.ID)
+                else if (order.DiscountCodeID == discount.ID || order.DiscountCode != null)
                 {
-                    ViewData["DiscountError"] = $"The code '{DiscountCode}' is already applied. You may only use one code per order!";
+                    ViewData["DiscountError"] = $"The code '{order.DiscountCode.Code}' is already applied. You may only use one code per order!";
                 }
                 else
                 {
