@@ -1,61 +1,69 @@
 ﻿<Properties StartupConfiguration="{461056B8-C6BA-49DA-851F-085E84BB2622}|Default">
-  <MonoDevelop.Ide.ItemProperties.MTM_220Holidays PreferredExecutionTarget="/Applications/Opera.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Checkout.cshtml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="Pages/Holidays/Create.cshtml" />
+      <File FileName="Pages/Holidays/Create.cshtml" Line="1" Column="1" />
       <File FileName="Pages/Addresses/Create.cshtml" />
-      <File FileName="Models/Address.cs" Line="1" Column="1" />
-      <File FileName="Models/Holiday.cs" Line="48" Column="64" />
-      <File FileName="Pages/Shared/_Layout.cshtml" />
-      <File FileName="Pages/Index.cshtml" Line="51" Column="124" />
-      <File FileName="MTM Holidays.csproj" Line="4" Column="46" />
-      <File FileName="Models/Order.cs" Line="35" Column="76" />
-      <File FileName="Models/Customer.cs" Line="28" Column="64" />
-      <File FileName="Models/CardPayment.cs" Line="25" Column="64" />
-      <File FileName="Pages/CardPayments/Create.cshtml.cs" Line="31" Column="1" />
-      <File FileName="Data/ApplicationDbContext.cs" Line="25" Column="1" />
-      <File FileName="Data/DbInitializer.cs" Line="13" Column="14" />
+      <File FileName="Models/Address.cs" />
+      <File FileName="Models/Holiday.cs" />
+      <File FileName="Pages/Shared/_Layout.cshtml" Line="24" Column="72" />
+      <File FileName="Pages/Index.cshtml" />
+      <File FileName="MTM Holidays.csproj" />
+      <File FileName="Models/Order.cs" />
+      <File FileName="Models/Customer.cs" />
+      <File FileName="Models/CardPayment.cs" />
+      <File FileName="Pages/CardPayments/Create.cshtml.cs" />
+      <File FileName="Data/ApplicationDbContext.cs" />
+      <File FileName="Data/DbInitializer.cs" />
       <File FileName="Pages/CardPayments/Create.cshtml" />
-      <File FileName="Models/DiscountCode.cs" Line="1" Column="1" />
+      <File FileName="Models/DiscountCode.cs" />
       <File FileName="Pages/Shared/_LoginPartial.cshtml" />
       <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
-      <File FileName="Models/Order_Holiday.cs" Line="40" Column="61" />
-      <File FileName="Pages/Orders/Index.cshtml" Line="2" Column="32" />
+      <File FileName="Models/Order_Holiday.cs" />
+      <File FileName="Pages/Orders/Index.cshtml" />
       <File FileName="Pages/Orders/Edit.cshtml" />
       <File FileName="Pages/Orders/Edit.cshtml.cs" />
-      <File FileName="Pages/Orders/Index.cshtml.cs" Line="125" Column="36" />
-      <File FileName="Program.cs" Line="36" Column="5" />
-      <File FileName="Pages/Orders/Delete.cshtml.cs" Line="23" Column="51" />
-      <File FileName="Pages/Orders/Delete.cshtml" Line="37" Column="43" />
-      <File FileName="appsettings.json" Line="9" Column="40" />
+      <File FileName="Pages/Orders/Index.cshtml.cs" />
+      <File FileName="Program.cs" />
+      <File FileName="Pages/Orders/Delete.cshtml.cs" />
+      <File FileName="Pages/Orders/Delete.cshtml" />
+      <File FileName="appsettings.json" />
       <File FileName="appsettings.Development.json" />
-      <File FileName="Models/Picture.cs" Line="24" Column="45" />
-      <File FileName="Pages/Error.cshtml.cs" Line="11" Column="18" />
+      <File FileName="Models/Picture.cs" />
+      <File FileName="Pages/Error.cshtml.cs" />
       <File FileName="Pages/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="Pages/Orders/IndexCopy.cshtml" />
       <File FileName="wwwroot/js/site.js" />
       <File FileName="Pages/FAQ.cshtml" />
-      <File FileName="Pages/Checkout.cshtml" Line="80" Column="84" />
-      <File FileName="Pages/Checkout.cshtml.cs" Line="55" Column="13" />
+      <File FileName="Pages/Checkout.cshtml" />
+      <File FileName="Pages/Checkout.cshtml.cs" />
       <File FileName="Pages/Orders/Details.cshtml" />
-      <File FileName="Pages/Orders/Details.cshtml.cs" Line="22" Column="51" />
+      <File FileName="Pages/Orders/Details.cshtml.cs" />
       <File FileName="wwwroot/css/site.css" />
-      <File FileName="Pages/Holiday.cshtml" />
-      <File FileName="Pages/Holiday.cshtml.cs" />
-      <File FileName="Pages/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Pages/CardPayments/Delete.cshtml.cs" Line="23" Column="63" />
-      <File FileName="Pages/CardPayments/Details.cshtml.cs" Line="22" Column="63" />
-      <File FileName="Pages/Customers/Details.cshtml.cs" Line="22" Column="57" />
-      <File FileName="Pages/Customers/Delete.cshtml.cs" Line="23" Column="57" />
-      <File FileName="Pages/Customers/Create.cshtml.cs" Line="32" Column="1" />
-      <File FileName="Pages/Orders/Create.cshtml.cs" Line="34" Column="1" />
-      <File FileName="Pages/Holidays/Create.cshtml.cs" Line="33" Column="1" />
-      <File FileName="Pages/Holidays/Delete.cshtml.cs" Line="23" Column="55" />
-      <File FileName="Pages/Holidays/Details.cshtml.cs" Line="22" Column="55" />
-      <File FileName="Pages/OrderHolidays/Details.cshtml.cs" Line="22" Column="67" />
-      <File FileName="Pages/OrderHolidays/Create.cshtml.cs" Line="33" Column="1" />
-      <File FileName="Pages/OrderHolidays/Delete.cshtml.cs" Line="23" Column="67" />
+      <File FileName="Pages/Holiday.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Holiday.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Pages/_ViewStart.cshtml" />
+      <File FileName="Pages/CardPayments/Delete.cshtml.cs" />
+      <File FileName="Pages/CardPayments/Details.cshtml.cs" />
+      <File FileName="Pages/Customers/Details.cshtml.cs" />
+      <File FileName="Pages/Customers/Delete.cshtml.cs" />
+      <File FileName="Pages/Customers/Create.cshtml.cs" />
+      <File FileName="Pages/Orders/Create.cshtml.cs" />
+      <File FileName="Pages/Holidays/Create.cshtml.cs" />
+      <File FileName="Pages/Holidays/Delete.cshtml.cs" />
+      <File FileName="Pages/Holidays/Details.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Pages/OrderHolidays/Details.cshtml.cs" />
+      <File FileName="Pages/OrderHolidays/Create.cshtml.cs" />
+      <File FileName="Pages/OrderHolidays/Delete.cshtml.cs" />
+      <File FileName="Pages/Order.cshtml.cs" />
+      <File FileName="Pages/Order.cshtml" Line="94" Column="114" />
+      <File FileName="Pages/Holidays/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Holidays/Edit.cshtml.cs" />
+      <File FileName="Pages/Holidays/Edit.cshtml" />
+      <File FileName="Pages/Error.cshtml" />
+      <File FileName="Pages/Payment.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Payment.cshtml.cs" />
+      <File FileName="Pages/Holidays/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Privacy.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -71,10 +79,16 @@
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="Checkout.cshtml" expanded="True">
-                  <Node name="Checkout.cshtml.cs" selected="True" />
+                <Node name="Holidays" expanded="True">
+                  <Node name="Create.cshtml" expanded="True" />
+                  <Node name="Details.cshtml" expanded="True" />
+                  <Node name="Edit.cshtml" expanded="True" />
                 </Node>
+                <Node name="Shared" expanded="True" />
+                <Node name="Checkout.cshtml" expanded="True" />
+                <Node name="Holiday.cshtml" expanded="True" />
                 <Node name="Order.cshtml" expanded="True" />
+                <Node name="Payment.cshtml" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
@@ -86,11 +100,13 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MTM_220Holidays PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Customers/Create.cshtml.cs" relfile="Pages/Customers/Create.cshtml.cs" line="41" column="1" />
+      <Breakpoint file="/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Holidays/Create.cshtml.cs" relfile="Pages/Holidays/Create.cshtml.cs" line="36" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
