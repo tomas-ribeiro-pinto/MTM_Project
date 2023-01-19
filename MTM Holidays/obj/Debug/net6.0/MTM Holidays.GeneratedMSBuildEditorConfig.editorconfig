@@ -139,12 +139,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Order.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXIuY3NodG1s
+[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/OrderHolidays/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXJIb2xpZGF5cy9DcmVhdGUuY3NodG1s
+[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/OrderHolidays/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJIb2xpZGF5c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/OrderHolidays/Delete.cshtml]
@@ -183,8 +183,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3JkZXJzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Payment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGF5bWVudC5jc2h0bWw=
+[C:/Users/milen/source/repos/co550web/MTM_Project/MTM Holidays/Pages/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Pages/Pictures/Create.cshtml]

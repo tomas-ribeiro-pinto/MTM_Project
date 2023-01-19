@@ -42,17 +42,17 @@ namespace MTM_Holidays.Data
 
             var holidays = new Holiday[]
             {
-                new Holiday{Title="Trip to Ibiza - All inclusive", Description="Ibiza description",
+                new Holiday{Title="Trip to Ibiza - All inclusive", Description="One of the world’s most popular party hotspots, the Ibiza Star is more than just a hotel - it’s a lifestyle. With awesome weekly events, showcasing a mix of exclusive pool parties and one-off events from the world’s biggest and freshest stars. If You looking for a Party holiday with the highest level of Hotel standards - 5 Stars all-inclusive, this place waiting for you. ",
                     OriginAddressID=1, DestinationAddressID=2, AccommodationType="Hotel", Rating=4, Region="Europe", Price=145},
-                new Holiday{Title="Trip to Bondi Beach in Australia", Description="Australia description",
+                new Holiday{Title="Trip to Bondi Beach in Australia", Description="The suites Bondi offer spectacular views of Sydney and its breathtaking harbour. World-famous Bondi Beach, home of Australia’s oldest Life Saving Club is only a short bus ride away. Private rooms are fully refurbished and provide all needed facilities for the guests. The whole trip is also provided with an all-inclusive service and a lot of attractions. \r\n",
                     OriginAddressID=1, DestinationAddressID=3, AccommodationType="Private", Rating=3, Region="Asia Pacific", Price=99},
-                new Holiday{Title="Travel to Navagio Beach in Greece!!", Description="Navagio description",
+                new Holiday{Title="Travel to Navagio Beach in Greece!!", Description="Get your camera at the ready for Navagio Beach – also known as Smuggler’s Cove or Shipwreck Beach. This stretch of sand is home to an actual shipwreck that ran aground in the 1980s, so it’s no surprise it’s one of Greece’s most iconic sights. Only accessible by boat, set sail to this unique beauty spot and mix sightseeing with soaking up the sun and a spot of swimming. Our Atlas Hotel is one of the closest hotel situated near Navagio Beach. ",
                     OriginAddressID=1, DestinationAddressID=4, AccommodationType="Hotel", Rating=5, Region="Europe", Price=220},
-                new Holiday{Title="Trip to Antalaya - All inclusive", Description="Antalaya description",
+                new Holiday{Title="Trip to Antalaya - All inclusive", Description="Antony and Cleopatra used to love Side. Set on Turkey’s south coast – about an hour from Antalya – the place hasn’t changed much since the Romans were here. There’s an untouched old town and crumbling ruins flanking the sandy beaches. Modern luxuries get a good look-in, too, with a chic harbour, waterfront restaurants and lively bars. We are prepared for You modern, 5-star Antalya Sunrise Resort with places to eat, drink and swim. And the beach on its doorstep is another highlight. ",
                     OriginAddressID=1, DestinationAddressID=5, AccommodationType="Resort", Rating=4, Region="Europe", Price=180},
-                new Holiday{Title="Phuket - Thailand's best beach", Description="Phuket description",
+                new Holiday{Title="Phuket - Thailand's best beach", Description="On your Phuket holiday, discover why this island is one of Thailand's most popular holiday destinations. With beaches stretching as far as the eye can see and a vibrant diverse culture (not to mention the buzzing nightlife), it's easy to fall in love with this exciting destination on a trip to Phuket. We are offering You 5 Star all-inclusive 2022 launched Kari Exclusive Hotel.\r\n",
                     OriginAddressID=1, DestinationAddressID=6, AccommodationType="Hotel", Rating=5, Region="Asia Pacific", Price=250},
-                new Holiday{Title="Trip to Santorini Beach", Description="Santorini description",
+                new Holiday{Title="Trip to Santorini Beach", Description="Chic and modern, 5 Stars Diamond Resort & Spa certainly lives up to its grand name. You'll have plenty of opportunity to relax here, whether you simply laze away the days by the pool or indulge yourself with treatments in the spa. We have got 5 delicious restaurants inside our resort and also full all-inclusive is provided for the guests. Located right on the black sands of Kamari, it’s the perfect place for couples to unwind.",
                     OriginAddressID=1, DestinationAddressID=7, AccommodationType="Resort", Rating=4, Region="Europe", Price=154}
             };
 
