@@ -22,7 +22,7 @@ public class IndexModel : PageModel
 
     public async Task<IActionResult> OnGetAsync()
     {
-        var holidays = await _context.Holidays.ToListAsync();
+        var holidays = await _context.Holidays.Where(p => p.ID <= 6).ToListAsync();
         if (holidays == null)
         {
             return NotFound();

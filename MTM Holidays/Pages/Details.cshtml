@@ -18,7 +18,7 @@
                     </div>
                     <div class="card-body">
                         <img style="width:100%; height:auto;" src="assets/img/elektra-klimi--Vss0cpydCw-unsplash.jpg">
-                        <p class="card-text mt-3">One of the world’s most popular party hotspots, the Ibiza Star is more than just a hotel - it’s a lifestyle. With awesome weekly events, showcasing a mix of exclusive pool parties and one-off events from the world’s biggest and freshest stars. If You looking for a Party holiday with the highest level of Hotel standards - 4 Stars all-inclusive, this place waiting for you. </p>
+                        <p class="card-text mt-3">@Model.Holiday.Description</p>
                         <p class="mt-4">Flying from: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.OriginAddress.Town<span>, @Model.Holiday.OriginAddress.Country</span></span></p>
                         <p>Flying to: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.DestinationAddress.Town<span>, @Model.Holiday.DestinationAddress.Country</span></span></p>
                         <p class="mt-4">Accoommodation Type: <span style="color: #0D4C73">@Model.Holiday.AccommodationType</span></p>
@@ -46,7 +46,7 @@
                             <li>Medical Care.</li>
                             <li>Travel Insurance.</li>
                             </ul>
-                        </p> <button class="row g-0 justify-content-end btn btn-primary d-block w-100" asp-route-id="@Model.Holiday.ID" type="submit" style="background: #f27052;">Add to Checkout</button>
+                        </p> <a class="row g-0 justify-content-end btn btn-primary d-block w-100" asp-route-id="@Model.Holiday.ID" asp-page="/Order" style="background: #f27052;">Add to Checkout</a>
                     </div>
                 </div>
                 </div>
