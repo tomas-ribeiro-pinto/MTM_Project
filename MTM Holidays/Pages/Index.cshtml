@@ -93,112 +93,28 @@
 
     <div class="album py-5 bg-light">
         <div class="container">
-
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img src="~/assets/img/ibiza.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
-                        <div class="card-body">
-                        <h4 class="card-text">Ibiza, Spain </h4>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                @foreach (var holiday in Model.Holidays)
+                {
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="@Url.Content(holiday.Pictures[0].URL)" class="card-img-top" style="width:345px; height:240px; position:relative;">
+                            <div class="card-body">
+                                <h4 class="card-text">@holiday.Title</h4>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="button" asp-route-id="@holiday.ID" asp-page="/Holiday" class="btn btn-sm btn-outline-secondary">View details</a>
+                                        <a type="button" asp-route-id="@holiday.ID" asp-page="/Order" class="btn btn-sm btn-outline-secondary">Book a holiday</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img src="~/assets/img/bondi.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
-                    <div class="card-body">
-                        <h4 class="card-text">Bondi Beach, Australia</h4>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img src="~/assets/img/navagio.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
-                    <div class="card-body">
-                        <h4 class="card-text">Navagio Beach, Greece</h4>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img src="~/assets/img/antalaya.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
-                    <div class="card-body">
-                        <h4 class="card-text">Antalaya Beach, Turkey</h4>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img src="~/assets/img/tailand.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
-                    <div class="card-body">
-                        <h4 class="card-text">Phuket, Tailand</h4>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img src="~/assets/img/santorini.jpg" class="card-img-top" style="width:345px; height:240px; position:relative;">
-                    <div class="card-body">
-                        <h4 class="card-text">Santorini Beach, Greece</h4>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
+                }
             </div>
         </div>
-        
-        
-   
     </div>
-<div class="button" style="right:150px;position:absolute; padding:right;">
+<div class="button" style="right:150px;position:absolute;">
 <p>
         <a href="#" class="btn btn-primary my-4" style="left:100px;right:100px; align:center;background-color: rgb(2, 62, 115)">All holiday offers</a>
     </p>

@@ -10,6 +10,15 @@ using MTM_Holidays.Models;
 
 namespace MTM_Holidays.Pages
 {
+
+    /// <summary>
+    /// After the customer confirms the order details, it is redirected to the payment page.
+    ///
+    /// Payment is always accepted if the validation is correct. This does not implement any real payment transactions going on.
+    /// 
+    /// </summary>
+    /// <author>Tomás Pinto</author>
+    /// <version>20th Jan 2023</version>
     public class PaymentModel : PageModel
     {
         private readonly MTM_Holidays.Data.ApplicationDbContext _context;

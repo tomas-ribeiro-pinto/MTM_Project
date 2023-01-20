@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -21,6 +22,8 @@ namespace MTM_Holidays.Pages
     /// </summary>
     /// <author>Tomás Pinto</author>
     /// <version>9th Jan 2023</version>
+
+    [Authorize]
     public class OrderModel : PageModel
     {
         private readonly MTM_Holidays.Data.ApplicationDbContext _context;
@@ -52,7 +55,6 @@ namespace MTM_Holidays.Pages
         [BindProperty]
         public int Person { get; set; }
 
-
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null || _context.Holidays == null)
@@ -75,6 +77,10 @@ namespace MTM_Holidays.Pages
             {
                 return NotFound();
             }
+
+            holiday.Pictures = await _context.Pictures.Where(m => m.HolidayID == holiday.ID)
+                .ToListAsync(); ;
+
             Holiday = holiday;
             Holiday.OriginAddress = originAddress;
             Holiday.DestinationAddress = destinationAddress;

@@ -21,7 +21,7 @@ namespace MTM_Holidays.Models
 		[Required, MaxLength(40, ErrorMessage = "The field {0} is too long")]
 		public string Title { get; set; } = String.Empty;
 
-		[MaxLength(100)]
+		[MaxLength(255)]
 		public string Description { get; set; } = String.Empty;
 
 		// Price per day of the Holiday
