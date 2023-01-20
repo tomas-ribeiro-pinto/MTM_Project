@@ -10,6 +10,14 @@ using MTM_Holidays.Models;
 
 namespace MTM_Holidays.Pages
 {
+    /// <summary>
+    /// When a customer clicks to buy a holiday, it's presented with a checkout page.
+    /// A customer can modify, delete and confirm details of their order.
+    /// They can also add discount codes to the order.
+    /// 
+    /// </summary>
+    /// <author>Tomás Pinto</author>
+    /// <version>20th Jan 2023</version>
     public class CheckoutModel : PageModel
     {
         private readonly MTM_Holidays.Data.ApplicationDbContext _context;
@@ -58,9 +66,9 @@ namespace MTM_Holidays.Pages
                 {
                     ViewData["DiscountError"] = $"The code '{DiscountCode}' is invalid!";
                 }
-                else if (order.DiscountCodeID == discount.ID)
+                else if (order.DiscountCodeID == discount.ID || order.DiscountCode != null)
                 {
-                    ViewData["DiscountError"] = $"The code '{DiscountCode}' is already applied. You may only use one code per order!";
+                    ViewData["DiscountError"] = $"The code '{order.DiscountCode.Code}' is already applied. You may only use one code per order!";
                 }
                 else
                 {

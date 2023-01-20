@@ -17,7 +17,7 @@
                         <h5 class="float-end">@Model.Holiday.Rating<i class="bi bi-star-fill text-warning"></i></h5>
                     </div>
                     <div class="card-body">
-                        <img style="width:100%; height:auto;" src="assets/img/elektra-klimi--Vss0cpydCw-unsplash.jpg">
+                        <img style="width:100%; height:auto;" src="@Url.Content(Model.Holiday.Pictures[0].URL)">
                         <p class="card-text mt-3">@Model.Holiday.Description</p>
                         <p class="mt-4">Flying from: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.OriginAddress.Town<span>, @Model.Holiday.OriginAddress.Country</span></span></p>
                         <p>Flying to: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.DestinationAddress.Town<span>, @Model.Holiday.DestinationAddress.Country</span></span></p>
@@ -91,7 +91,7 @@
                         <label class="form-label">Start Holiday Date: *</label>
                         <input type="date" class="form-control mb-1" value="today" asp-for="@Model.StartDate" required />
                         <label class="form-label">Nights: *</label>
-                        <input type="number" class="form-control mb-1" placeholder="Qty" min="2" max="8" value="1" asp-for="@Model.Night" required />
+                        <input type="number" class="form-control mb-1" placeholder="Qty" min="2" max="8" value="2" asp-for="@Model.Night" required />
                         <label class="form-label">Persons *</label>
                         <input type="number" class="form-control mb-1" placeholder="Qty" min="1" max="4" value="1" asp-for="@Model.Person" required />
                     </div>
@@ -100,7 +100,9 @@
                         <input type="hidden" asp-for="Holiday.Title" />
                         <input type="hidden" asp-for="Holiday.Rating" />
                         <input type="hidden" asp-for="Holiday.Region" />
-                        <button class="btn btn-primary d-block w-100" type="submit" style="background: #f27052;">Continue and Order</button>
+                        <div class="col-4 float-start px-2"><a asp-page="/Index" class="btn d-block w-100" style="background: var(--bs-card-bg);border-color: #023e73;">Cancel</a></div>
+                        <div class="col-8 float-end px-1"><button class="btn btn-dark d-block w-100" type="submit" style="background: #f27052;">Continue and Order</button></div>
+                        <br>
                     </div>
                 </form>
             </div>
