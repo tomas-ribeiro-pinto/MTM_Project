@@ -42,7 +42,7 @@ namespace MTM_Holidays.Data
 
             var holidays = new Holiday[]
             {
-                new Holiday{Title="Trip to Ibiza - All inclusive", Description="One of the world’s most popular party hotspots, the Ibiza Star is more than just a hotel - it’s a lifestyle. With awesome weekly events, showcasing a mix of exclusive pool parties and one-off events from the world’s biggest and freshest stars. If You looking for a Party holiday with the highest level of Hotel standards - 5 Stars all-inclusive, this place waiting for you. ",
+                new Holiday{Title="Trip to Ibiza - All inclusive", Description="One of the world’s most popular party hotspots, the Ibiza Star is more than just a hotel - it’s a lifestyle. With awesome weekly events, showcasing a mix of exclusive pool parties and one-off events from the world’s biggest and freshest stars. If You looking for a Party holiday with the highest level of Hotel standards - 4 Stars all-inclusive, this place waiting for you. ",
                     OriginAddressID=1, DestinationAddressID=2, AccommodationType="Hotel", Rating=4, Region="Europe", Price=145},
                 new Holiday{Title="Trip to Bondi Beach in Australia", Description="The suites Bondi offer spectacular views of Sydney and its breathtaking harbour. World-famous Bondi Beach, home of Australia’s oldest Life Saving Club is only a short bus ride away. Private rooms are fully refurbished and provide all needed facilities for the guests. The whole trip is also provided with an all-inclusive service and a lot of attractions. \r\n",
                     OriginAddressID=1, DestinationAddressID=3, AccommodationType="Private", Rating=3, Region="Asia Pacific", Price=99},
