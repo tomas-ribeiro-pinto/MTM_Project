@@ -1,0 +1,185 @@
+﻿@page
+@model MTM_Holidays.Pages.OrderModel
+
+@{
+    ViewData["Title"] = "Holiday - " + Model.Holiday.Title;
+}
+
+<div class="container">
+    <div class="row g-0 justify-content-center">
+        <h1 class="text-center mt-3">@Model.Holiday.DestinationAddress.Town 🌴🌊</h1>
+        <div class="col-md-6 offset-lg-0 d-flex mt-4 mr-2 col-lg-9 h-100">
+            <div class="p-3" style="background: #023E73; border-top-left-radius: 1em; border-bottom-left-radius: 1em;">
+                <p class="lead" style="color: white;font-weight: bold;"><i class="bi bi-info-circle-fill text-warning"></i>&nbsp;Holiday Details</p>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="float-start">@Model.Holiday.Title</h5>
+                        <h5 class="float-end">@Model.Holiday.Rating<i class="bi bi-star-fill text-warning"></i></h5>
+                    </div>
+                    <div class="card-body">
+                        <img style="width:100%; height:auto;" src="assets/img/elektra-klimi--Vss0cpydCw-unsplash.jpg">
+                        <p class="card-text mt-3">One of the world’s most popular party hotspots, the Ibiza Star is more than just a hotel - it’s a lifestyle. With awesome weekly events, showcasing a mix of exclusive pool parties and one-off events from the world’s biggest and freshest stars. If You looking for a Party holiday with the highest level of Hotel standards - 4 Stars all-inclusive, this place waiting for you. </p>
+                        <p class="mt-4">Flying from: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.OriginAddress.Town<span>, @Model.Holiday.OriginAddress.Country</span></span></p>
+                        <p>Flying to: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.DestinationAddress.Town<span>, @Model.Holiday.DestinationAddress.Country</span></span></p>
+                        <p class="mt-4">Accoommodation Type: <span style="color: #0D4C73">@Model.Holiday.AccommodationType</span></p>
+                        <h4 class="text-end">Price: £ <span style="color: #F27052">@Model.Holiday.Price</span> pppn.*</h4>
+                        <p class="text-end text-muted" style="font-size:0.7em;">* Per Person Per Night</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+    <div class="col mt-4 col-md-6 col-lg-3 ml-1">
+            <div class="p-3" style="background: #fac4b8;">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="float-center">Price Include: </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text mt-3">
+                        <ul>
+                            <li>Stay in a high standard place with all inclusive.</li>
+                            <li>Surroundings of extraordinary nature.</li>
+                            <li>Airport transfer.</li>
+                            <li>Events, concerts and parties.</li>
+                            <li>Medical Care.</li>
+                            <li>Travel Insurance.</li>
+                            </ul>
+                        </p> <button class="row g-0 justify-content-end btn btn-primary d-block w-100" asp-route-id="@Model.Holiday.ID" type="submit" style="background: #f27052;">Add to Checkout</button>
+                    </div>
+                </div>
+                </div>
+                
+            <div class="p-4" style="background: #afc3d0;">
+              
+                            <h5 class="float-center" style="color:white; font-weight:bold">Our Trips are: </h5>
+                       
+                        <div class="card-body">
+                            <p class="card-text mt-3">
+                        <div class="row gy-2 row-cols-1 row-cols-sm-2">
+                            <div class="col text-center text-md-start">
+                                <div class="d-flex justify-content-center align-items-center justify-content-md-start">
+                                    <svg class="icon icon-tabler icon-tabler-sun fs-3 text-primary bg-warning" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                    </svg>
+                                    <h5 class="fw-bold mb-0 ms-2" style="color:white;">Covid Safe</h5>
+                                </div>
+                            </div>
+                            <div class="col text-center text-md-start">
+                                <div class="d-flex justify-content-center align-items-center justify-content-md-start">
+                                    <svg class="icon icon-tabler icon-tabler-sun fs-3 text-primary bg-warning" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                    </svg>
+                                    <h5 class="fw-bold mb-0 ms-2"  style="color:white;">Family Friendly</h5>
+                                </div>
+                            </div>
+                            <div class="col text-center text-md-start">
+                                <div class="d-flex justify-content-center align-items-center justify-content-md-start">
+                                    <svg class="icon icon-tabler icon-tabler-sun fs-3 text-primary bg-warning" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                    </svg>
+                                    <h5 class="fw-bold mb-0 ms-2" style="color:white;">Flexible </h5>
+                                </div>
+                              
+                            </div>
+                            <div class="col text-center text-md-start">
+                                <div class="d-flex justify-content-center align-items-center justify-content-md-start">
+                                    <svg class="icon icon-tabler icon-tabler-sun fs-3 text-primary bg-warning" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                    </svg>
+                                    <h5 class="fw-bold mb-0 ms-2" style="color:white;">Certified</h5>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        </div>
+
+                    </div>
+            <section class="showcase">
+                <div class="container-fluid p-0" style="background:#eff3f5">
+                  
+                    <div class="row g-0">
+                        <div class="col-lg-6 text-white order-lg-2 showcase-img" style="background-image"><span></span>
+                            <img style="width:100%; height:auto;" src="assets/img/family.jpg">
+                        </div>
+                        <div class="col-lg-6 my-auto order-lg-1 showcase-text" style="color:#023E73">
+                            <!-- <h2>&nbsp;&nbsp;We Are</h2>-->
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-lg-6 text-white showcase-img" style="background-image"><span></span>
+                            <img style="width:100%; height:auto;" src="assets/img/chill.jpg">
+                        </div>
+                        <div class="col-lg-6 my-auto order-lg-1 showcase-text" style="color:#023E73">
+                            <!-- <h2>&nbsp;&nbsp;Looking</h2>-->
+                        </div>
+                    </div>
+                  
+                        <div class="row g-0">
+                            <div class="col-lg-6 text-white order-lg-2 showcase-img" style="background-image">
+                                <span></span>
+                                <img style="width:100%; height:auto;" src="assets/img/people.jpg">
+                            </div>
+                        <div class="col-lg-6 my-auto order-lg-1 showcase-text"style="color:#023E73">
+                            <!--<h2>&nbsp;Forward</h2>-->
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-lg-6 text-white showcase-img" style="background-image">
+                                <span></span>
+                                <img style="width:100%; height:auto;" src="assets/img/activity.jpg">
+                            </div>
+                            <div class="col-lg-6 my-auto order-lg-1 showcase-text" style="color:#023E73">
+                            <!-- <h2>To Seeing</h2>-->
+                        </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-lg-6 text-white order-lg-2 showcase-img" style="background-image">
+                                <span></span>
+                                <img style="width:100%; height:auto;" src="assets/img/resort.jpg">
+                            </div>
+                        <div class="col-lg-6 my-auto order-lg-1 showcase-text" style="color:#023E73">
+                            <!--   <h2> &nbsp;&nbsp; You!<i class="bi bi-emoji-sunglasses"></i></h2>-->
+                            </div>
+                        </div>
+
+                    </div>
+              
+            </section>
+            </div>
+    
+        
+    </div>
+  
+
+
+
+                    <div>
+                        <input type="hidden" asp-for="Holiday.ID" />
+                        <input type="hidden" asp-for="Holiday.Title" />
+                        <input type="hidden" asp-for="Holiday.Rating" />
+                        <input type="hidden" asp-for="Holiday.Region" />
+                       
+                    </div>
+    <section class="py-4 py-xl-5">
+        <div class="container">
+            <div style="background-color: rgb(2, 62, 115);" class="text-white border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
+                <div class="pb-2 pb-lg-1">
+                    <h2 class="fw-bold mb-2" style="color: rgb(242,113,82);">Not sure which holiday suits you?</h2>
+                    <p class="mb-0">Or maybe you have some questions regarding our packages...</p>
+                </div>
+                <div class="my-2"><a class="btn btn-light fs-5 py-2 px-4" role="button" href="contacts.html">Contact us!</a></div>
+            </div>
+        </div>
+    </section>
+    
+ </div>

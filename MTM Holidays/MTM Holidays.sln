@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1704.2
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTM Holidays", "MTM Holidays.csproj", "{461056B8-C6BA-49DA-851F-085E84BB2622}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTM Holidays", "MTM Holidays.csproj", "{461056B8-C6BA-49DA-851F-085E84BB2622}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
