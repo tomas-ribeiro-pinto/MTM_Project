@@ -1,5 +1,184 @@
 ﻿@page
 @model MTM_Holidays.Pages.HolidayModel
-@{
-}
 
+@{
+    ViewData["Title"] = "Holidays";
+}
+<!--Page Heading-->
+<br />
+<br />
+<h1 class="fw-bold">Available Holidays...</h1>
+<br />
+
+<!--Info Bar-->
+<section class="text-center features-icons" style="background-color:#F7B1A1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="bi bi-airplane m-auto" style="font-size: 4em;"></i></div>
+                        <h3>All Inclusive</h3>
+                        <p class="lead mb-0">You never need to leave, we will take care of everything!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="bi bi-suit-heart m-auto" style="font-size: 4em;"></i></i></div>
+                        <h3>Family Friendly</h3>
+                        <p class="lead mb-0">Endless fun for the whole family!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="bi bi-award m-auto" style="font-size: 4em;"></i></div>
+                        <h3>ATOL Protected</h3>
+                        <p class="lead mb-0">Travel with reassuarnce and piece of mind!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<br />
+
+<!--Sort and Search Section-->
+<section>
+    <nav class="navbar navbar-expand-md navbar--apple bg-light" style="border:1px solid #023E73; border-radius:5px;">
+        <div class="container flex-grow">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-1">...</button>
+            <div id="menu" class="collapse navbar-collapse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <button class="btn mt-1" type="submit" style="background-color:#567b92; color:white" href="#">Hotels</button>&ensp;
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn mt-1" type="submit" style="background-color:#567b92; color:white" href="#">Resorts</button>&ensp;
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn mt-1" type="submit" style="background-color:#567b92; color:white" href="#">Private</button>&ensp;
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle mt-1" style="background-color:#023E73; color:white;" aria-expanded="false" data-bs-toggle="dropdown" type="button">Sort By </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Price: High to Low</a>
+                                <a class="dropdown-item" href="#">Price: Low to High</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-xs-block d-md-block"></li>
+                    <li class="nav-item d-none d-xs-block d-md-block">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                </ul>
+                <form class="d-flex pl-5 justify-content-end" style="margin-left:500px" method="post">
+                    <div class="shadow-lg mt-3 mb-3"><input class="form-control" type="text" name="Destination" placeholder="Destination " /></div>
+                    <div class="shadow-lg mt-3 mb-3"><button class="btn" type="submit" style="background-color:#567b92; height:38px; color:white">Search <i class="bi bi-search"></i> </button></div>
+                </form>
+            </div>
+            <div id="menu-1" class="collapse navbar-collapse"></div>
+        </div>
+    </nav>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Navbar---Apple.js"></script>
+</section>
+<br />
+
+<!--Products-->
+<body>
+    <div class="row" style="width:50%; padding-left:150px;">
+        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
+            <div class="card mb-2 mt-4 box-shadow">
+                <img src="~/assets/img/ibiza.jpg" class="card-img-center" style="width:100%; height:240px;">
+                <div class="card-body">
+                    <h4 class="card-text">Ibiza, Spain </h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="width:50%; padding-left:150px;">
+        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
+            <div class="card mb-2 mt-5 box-shadow">
+                <img src="~/assets/img/bondi.jpg" class="card-img-center" style="width:100%; height:240px;">
+                <div class="card-body">
+                    <h4 class="card-text">Bondi Beach, Australia </h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="width:50%; padding-left:150px;">
+        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
+            <div class="card mb-2 mt-5 box-shadow">
+                <img src="~/assets/img/navagio.jpg" class="card-img-center" style="width:100%; height:240px;">
+                <div class="card-body">
+                    <h4 class="card-text">Navagio Beach, Greece </h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="width:50%; padding-left:150px;">
+        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
+            <div class="card mb-2 mt-5 box-shadow">
+                <img src="~/assets/img/antalaya.jpg" class="card-img-center" style="width:100%; height:240px;">
+                <div class="card-body">
+                    <h4 class="card-text">Antalaya Beach, Turkey </h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="width:50%; padding-left:150px;">
+        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
+            <div class="card mb-2 mt-5 box-shadow">
+                <img src="~/assets/img/tailand.jpg" class="card-img-center" style="width:100%; height:240px;">
+                <div class="card-body">
+                    <h4 class="card-text">Phuket, Tailand </h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="width:50%; padding-left:150px;">
+        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
+            <div class="card mb-2 mt-5 box-shadow">
+                <img src="~/assets/img/santorini.jpg" class="card-img-center" style="width:100%; height:240px;">
+                <div class="card-body">
+                    <h4 class="card-text">Santorini Beach, Greece </h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

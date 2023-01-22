@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\MTM Holidays.csproj": {}
+    "/Users/maartenvanderbeeken/Documents/GitHub/MTM_Project/MTM Holidays/MTM Holidays.csproj": {}
   },
   "projects": {
-    "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\MTM Holidays.csproj": {
+    "/Users/maartenvanderbeeken/Documents/GitHub/MTM_Project/MTM Holidays/MTM Holidays.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\MTM Holidays.csproj",
+        "projectUniqueName": "/Users/maartenvanderbeeken/Documents/GitHub/MTM_Project/MTM Holidays/MTM Holidays.csproj",
         "projectName": "MTM Holidays",
-        "projectPath": "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\MTM Holidays.csproj",
-        "packagesPath": "C:\\Users\\milen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\milen\\source\\repos\\co550web\\MTM_Project\\MTM Holidays\\obj\\",
+        "projectPath": "/Users/maartenvanderbeeken/Documents/GitHub/MTM_Project/MTM Holidays/MTM Holidays.csproj",
+        "packagesPath": "/Users/maartenvanderbeeken/.nuget/packages/",
+        "outputPath": "/Users/maartenvanderbeeken/Documents/GitHub/MTM_Project/MTM Holidays/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\milen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/maartenvanderbeeken/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -94,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
