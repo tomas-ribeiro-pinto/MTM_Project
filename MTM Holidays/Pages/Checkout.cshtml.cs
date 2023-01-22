@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,8 @@ namespace MTM_Holidays.Pages
     /// </summary>
     /// <author>Tomás Pinto</author>
     /// <version>20th Jan 2023</version>
+
+    [Authorize]
     public class CheckoutModel : PageModel
     {
         private readonly MTM_Holidays.Data.ApplicationDbContext _context;
@@ -37,13 +40,13 @@ namespace MTM_Holidays.Pages
         {
             if (id == null || _context.Orders == null)
             {
-                return NotFound();
+                return RedirectToPage("NotFound");
             }
 
             var order = await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);
             if (order == null)
             {
-                return NotFound();
+                return RedirectToPage("NotFound");
             }
             else if (order.IsPaid)
             {
@@ -51,6 +54,12 @@ namespace MTM_Holidays.Pages
             }
 
             Order = GetOrderAsync(order.ID).Result;
+
+            if (User.Identity.Name != Order.Customer.EmailAddress)
+            {
+                return RedirectToPage("Unauthorized");
+            }
+
 
             return Page();
         }
@@ -154,6 +163,39 @@ namespace MTM_Holidays.Pages
             await _context.SaveChangesAsync();
 
             return await OnGetAsync(order.ID);
+        }
+
+        public async Task<IActionResult> OnGetRemoveHoliday(int? oh)
+        {
+            var order_holiday = await _context.Order_Holidays.FirstOrDefaultAsync(p => p.ID == oh);
+            Order = GetOrderAsync(order_holiday.OrderID).Result;
+
+            Order.Order_Holidays.Remove(order_holiday);
+
+            _context.Order_Holidays.Remove(order_holiday);
+            if (Order.Order_Holidays.Count == 0)
+            {
+                _context.Orders.Remove(Order);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("Index");
+            }
+            _context.Attach(Order).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return await OnGetAsync(Order.ID);
+        }
+
+        public async Task<IActionResult> OnGetCancelOrder(int? id)
+        {
+            Order = GetOrderAsync((int)id).Result;
+            foreach (var order_holiday in Order.Order_Holidays)
+            {
+                _context.Order_Holidays.Remove(order_holiday);
+            }
+            Order.Order_Holidays = null;
+            _context.Orders.Remove(Order);
+            await _context.SaveChangesAsync();
+            return RedirectToPage("Index");
         }
     }
 }

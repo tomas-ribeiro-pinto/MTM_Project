@@ -21,7 +21,7 @@ namespace MTM_Holidays.Pages
     /// 
     /// </summary>
     /// <author>Tomás Pinto</author>
-    /// <version>9th Jan 2023</version>
+    /// <version>20th Jan 2023</version>
 
     [Authorize]
     public class OrderModel : PageModel
@@ -59,31 +59,20 @@ namespace MTM_Holidays.Pages
         {
             if (id == null || _context.Holidays == null)
             {
-                return NotFound();
+                return RedirectToPage("NotFound");
             }
 
             var holiday = await _context.Holidays.FirstOrDefaultAsync(m => m.ID == id);
             if (holiday == null)
             {
-                return NotFound();
-            }
-            var originAddress = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == holiday.OriginAddressID);
-            if (originAddress == null)
-            {
-                return NotFound();
-            }
-            var destinationAddress = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == holiday.DestinationAddressID);
-            if (destinationAddress == null)
-            {
-                return NotFound();
+                return RedirectToPage("NotFound");
             }
 
-            holiday.Pictures = await _context.Pictures.Where(m => m.HolidayID == holiday.ID)
-                .ToListAsync(); ;
-
+            holiday.OriginAddress = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == holiday.OriginAddressID);
+            holiday.DestinationAddress = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == holiday.DestinationAddressID);
+            holiday.Pictures = await _context.Pictures.Where(m => m.HolidayID == holiday.ID).ToListAsync();
             Holiday = holiday;
-            Holiday.OriginAddress = originAddress;
-            Holiday.DestinationAddress = destinationAddress;
+
             return Page();
         }
 
@@ -108,13 +97,12 @@ namespace MTM_Holidays.Pages
 
         /// <summary>
         /// Adds Customer Details and Address to DbContext
-        ///
-        /// TODO: Replace this by Identity Details
         /// </summary>
         public void AddCustomerInfo()
         {
             _context.Addresses.Add(Address);
-
+            // MAkes sure this order is placed by the current user
+            Customer.EmailAddress = User.Identity?.Name;
             Customer.Address = Address;
             _context.Customers.Add(Customer);
         }
