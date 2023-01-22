@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MTM_Holidays.Pages
 {
-	public class HolidayModel : PageModel
+    /// <author>Maarten</author>
+    /// <version>22nd Jan 2023</version>
+    public class HolidayModel : PageModel
     {
         public void OnGet()
         {

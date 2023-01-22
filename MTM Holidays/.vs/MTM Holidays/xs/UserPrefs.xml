@@ -1,22 +1,106 @@
 ﻿<Properties StartupConfiguration="{461056B8-C6BA-49DA-851F-085E84BB2622}|Default">
   <MonoDevelop.Ide.ItemProperties.MTM_220Holidays PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Orders/Create.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Index.cshtml">
     <Files>
-      <File FileName="Pages/Unauthorized.cshtml" />
-      <File FileName="Pages/NotFound.cshtml" />
-      <File FileName="Pages/OrderEdit.cshtml" />
-      <File FileName="Pages/OrderEdit.cshtml.cs" />
-      <File FileName="Pages/Orders/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Holidays/Create.cshtml" />
+      <File FileName="Pages/Addresses/Create.cshtml" />
+      <File FileName="Models/Address.cs" />
+      <File FileName="Models/Holiday.cs" />
+      <File FileName="Pages/Shared/_Layout.cshtml" />
+      <File FileName="Pages/Index.cshtml" Line="75" Column="116" />
+      <File FileName="MTM Holidays.csproj" />
+      <File FileName="Models/Order.cs" />
+      <File FileName="Models/Customer.cs" />
+      <File FileName="Models/CardPayment.cs" />
+      <File FileName="Pages/CardPayments/Create.cshtml.cs" />
+      <File FileName="Data/ApplicationDbContext.cs" />
+      <File FileName="Data/DbInitializer.cs" />
+      <File FileName="Pages/CardPayments/Create.cshtml" />
+      <File FileName="Models/DiscountCode.cs" />
+      <File FileName="Pages/Shared/_LoginPartial.cshtml" />
+      <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
+      <File FileName="Models/Order_Holiday.cs" />
+      <File FileName="Pages/Orders/Index.cshtml" />
+      <File FileName="Pages/Orders/Edit.cshtml" />
+      <File FileName="Pages/Orders/Edit.cshtml.cs" />
+      <File FileName="Pages/Orders/Index.cshtml.cs" />
+      <File FileName="Program.cs" />
+      <File FileName="Pages/Orders/Delete.cshtml.cs" />
+      <File FileName="Pages/Orders/Delete.cshtml" />
+      <File FileName="appsettings.json" />
+      <File FileName="appsettings.Development.json" />
+      <File FileName="Models/Picture.cs" />
+      <File FileName="Pages/Error.cshtml.cs" />
+      <File FileName="Pages/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="wwwroot/js/site.js" />
+      <File FileName="Pages/FAQ.cshtml" />
+      <File FileName="Pages/Checkout.cshtml" Line="37" Column="177" />
+      <File FileName="Pages/Checkout.cshtml.cs" Line="47" Column="1" />
+      <File FileName="Pages/Orders/Details.cshtml" />
+      <File FileName="Pages/Orders/Details.cshtml.cs" />
+      <File FileName="wwwroot/css/site.css" />
+      <File FileName="Pages/Holiday.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Holiday.cshtml.cs" Line="16" Column="10" />
+      <File FileName="Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/CardPayments/Delete.cshtml.cs" />
+      <File FileName="Pages/CardPayments/Details.cshtml.cs" />
+      <File FileName="Pages/Customers/Details.cshtml.cs" />
+      <File FileName="Pages/Customers/Delete.cshtml.cs" />
+      <File FileName="Pages/Customers/Create.cshtml.cs" />
+      <File FileName="Pages/Orders/Create.cshtml.cs" />
+      <File FileName="Pages/Holidays/Create.cshtml.cs" />
+      <File FileName="Pages/Holidays/Delete.cshtml.cs" />
+      <File FileName="Pages/Holidays/Details.cshtml.cs" />
+      <File FileName="Pages/OrderHolidays/Details.cshtml.cs" />
+      <File FileName="Pages/OrderHolidays/Create.cshtml.cs" />
+      <File FileName="Pages/OrderHolidays/Delete.cshtml.cs" />
+      <File FileName="Pages/Order.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Pages/Order.cshtml" Line="3" Column="1" />
+      <File FileName="Pages/Holidays/Details.cshtml" />
+      <File FileName="Pages/Holidays/Edit.cshtml.cs" />
+      <File FileName="Pages/Holidays/Edit.cshtml" />
+      <File FileName="Pages/Error.cshtml" />
+      <File FileName="Pages/Payment.cshtml" />
+      <File FileName="Pages/Payment.cshtml.cs" Line="58" Column="1" />
+      <File FileName="Pages/Holidays/Index.cshtml" />
+      <File FileName="Pages/Privacy.cshtml" />
+      <File FileName="Pages/Confirmation.cshtml" Line="40" Column="93" />
+      <File FileName="Pages/Confirmation.cshtml.cs" Line="48" Column="1" />
+      <File FileName="Pages/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Details.cshtml.cs" Line="9" Column="1" />
+      <File FileName="Pages/OrderEdit.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/OrderEdit.cshtml.cs" Line="68" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MTM Holidays" expanded="True">
             <Node name="MTM Holidays" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="Orders" expanded="True" />
+                <Node name="Holidays" expanded="True">
+                  <Node name="Create.cshtml" expanded="True" />
+                  <Node name="Details.cshtml" expanded="True" />
+                  <Node name="Edit.cshtml" expanded="True" />
+                </Node>
+                <Node name="Checkout.cshtml" expanded="True" />
+                <Node name="Confirmation.cshtml" expanded="True" />
                 <Node name="Details.cshtml" expanded="True" />
-                <Node name="Index.cshtml" expanded="True" />
+                <Node name="Index.cshtml" selected="True" />
+                <Node name="Order.cshtml" expanded="True" />
+                <Node name="OrderEdit.cshtml" expanded="True" />
+                <Node name="Payment.cshtml" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
               </Node>
             </Node>
           </Node>

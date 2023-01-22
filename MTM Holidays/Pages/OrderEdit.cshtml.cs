@@ -62,10 +62,11 @@ namespace MTM_Holidays.Pages
             var order = GetOrderAsync(Order_Holiday.OrderID).Result;
             var holiday = await _context.Holidays.FirstOrDefaultAsync(m => m.ID == Order_Holiday.HolidayID);
 
-            if (order == null || holiday == null)
+            if (order == null || holiday == null || order.IsPaid)
             {
                 return RedirectToPage("NotFound");
             }
+
             else if (User.Identity.Name != Order.Customer.EmailAddress)
             {
                 return RedirectToPage("Unauthorized");

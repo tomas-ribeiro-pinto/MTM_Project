@@ -44,13 +44,9 @@ namespace MTM_Holidays.Pages
             }
 
             var order = await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);
-            if (order == null)
+            if (order == null || order.IsPaid)
             {
                 return RedirectToPage("NotFound");
-            }
-            else if (order.IsPaid)
-            {
-                return RedirectToPage("Index");
             }
 
             Order = GetOrderAsync(order.ID).Result;

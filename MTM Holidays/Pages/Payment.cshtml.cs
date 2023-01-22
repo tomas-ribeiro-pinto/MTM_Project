@@ -46,22 +46,19 @@ namespace MTM_Holidays.Pages
             {
                 return NotFound();
             }
+
+            var order = await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);
+            if (order == null || order.IsPaid)
+            {
+                return RedirectToPage("NotFound");
+            }
+
+            Order = GetOrderAsync(order.ID).Result;
+
             if (User.Identity.Name != Order.Customer.EmailAddress)
             {
                 return RedirectToPage("Unauthorized");
             }
-
-            var order = await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);
-            if (order == null)
-            {
-                return NotFound();
-            }
-            else if (order.IsPaid)
-            {
-                return RedirectToPage("Index");
-            }
-
-            Order = GetOrderAsync(order.ID).Result;
 
             return Page();
         }
@@ -125,7 +122,7 @@ namespace MTM_Holidays.Pages
                 }
             }
 
-            return RedirectToPage("Index");
+            return RedirectToPage("Confirmation", new { id = Order.ID });
         }
 
         public double CalculateTotal()

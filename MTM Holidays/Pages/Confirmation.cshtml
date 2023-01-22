@@ -1,0 +1,93 @@
+﻿@page
+@model MTM_Holidays.Pages.ConfirmationModel
+@{
+}
+
+<div class="p-4">
+    <div class="card">
+        <div class="card-body shadow-none" style="background: #023e73;border: 0.5px solid rgb(2,62,115);">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-black-50"></p>
+                            <div class="row">
+                                <div class="col">
+                                    <h1 style="text-align: center;color: var(--bs-card-bg);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg">
+                                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                        </svg>&nbsp;Order Confirmation
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row p-3">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Order #@Model.Order.ID</h4>
+                    <p class="card-text mb-0"><strong>Status</strong></p>
+                    <p class="card-text">Paid</p>
+                    <p class="card-text mb-0"><strong>Created</strong></p>
+                    <p class="card-text">@Model.Order.OrderDate.ToString("dd/MM/yyyy HH:mm")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Customer Details</h4>
+                    <p class="card-text mb-0"><strong>Name</strong></p>
+                    <p class="card-text">@Model.Order.Customer.FirstName @Model.Order.Customer.LastName</p>
+                    <p class="card-text mb-0"><strong>Email</strong></p>
+                    <p class="card-text">@Model.Order.Customer.EmailAddress</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row p-3">
+        <div class="col-lg-6 offset-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Order Summary</h4>
+                    @foreach (var order_holiday in Model.Order.Order_Holidays)
+                    {
+                        <div>
+                            <p class="mb-0 float-end"><strong>£@Model.CalculateTotal(order_holiday)</strong></p>
+                            <p class="mb-0">@order_holiday.Holiday.Title</p>
+                            <p class="mb-0 float-end" style="font-size: 0.8em;color: var(--bs-gray-700);">(£@order_holiday.Holiday.Price)</p>
+                            <p style="font-size: 0.8em;color: rgb(242,111,83);;">
+                                <span>Dates: @order_holiday.StartDate.ToShortDateString()</span>&nbsp;To <span style="color: rgb(242, 112, 82);">
+                                    @order_holiday.EndDate.ToShortDateString()
+                                </span>&nbsp; &nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person-fill">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                                </svg>&nbsp;@order_holiday.Quantity
+                            </p>
+                        </div>
+                    }
+                    <hr>
+                    @if (Model.Order.DiscountCodeID != null)
+                    {
+                        <div>
+                            <p class="mb-0 float-end">- £@Model.Order.DiscountCode.Discount</p>
+                            <p class="mb-0">Discount</p>
+                        </div>
+                        <hr>
+                    }
+                    <div>
+                        <p class="mb-0 float-end">£@Model.CalculateTotal()</p>
+                        <p class="mb-0"><strong>Total</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
