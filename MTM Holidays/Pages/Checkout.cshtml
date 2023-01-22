@@ -56,16 +56,16 @@
                                 </div>
                                 <div class="float-end">
                                     <p class="mb-0 text-end" style="font-size: 0.9em;color: rgb(242,111,83);"><strong>£ @order_holiday.Holiday.Price pppn.*</strong></p>
-                                    <p class="text-muted text-end" style="font-size: 0.8em;">* Per Person Per Night</p><button class="btn" type="button" style="margin-right:0.3em;background: var(--bs-card-bg);border-style: solid;border-color: var(--bs-gray-300);">
+                                    <p class="text-muted text-end" style="font-size: 0.8em;">* Per Person Per Night</p><a class="btn" asp-page="/OrderEdit" asp-route-id="@order_holiday.ID" type="button" style="margin-right:0.3em;background: var(--bs-card-bg);border-style: solid;border-color: var(--bs-gray-300);">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pencil-square">
                                             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
                                             <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path>
                                         </svg>&nbsp;Edit
-                                    </button><button class="btn btn-danger float-end" type="button">
+                                    </a><a class="btn btn-danger float-end" type="button" asp-route-oh="@order_holiday.ID" asp-page-handler="RemoveHoliday">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-circle-fill">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"></path>
                                         </svg>&nbsp;Remove
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                         <form method="post">
                             <div class="col-md-7 col-sm-12 float-start px-2">
                                 <div class="form-group mb-3">
-                                    <input class="form-control" type="text" asp-for="@Model.DiscountCode" placeholder="Enter your discount Code" required/>
+                                    <input class="form-control" type="text" asp-for="@Model.DiscountCode" placeholder="Enter your discount Code" required />
                                 </div>
                             </div>
                             <div class="col-md-5 col-sm-12 float-end">
@@ -118,7 +118,7 @@
                     </div>
                     <hr style="color: rgb(0,0,0);">
                     <div class="row">
-                        <div class="col-12 col-sm-6 col-lg-5"><a class="btn d-block w-100" style="background: var(--bs-card-bg);border-color: #023e73;">Cancel</a></div>
+                        <div class="col-12 col-sm-6 col-lg-5"><a class="btn d-block w-100" asp-route-id="@Model.Order.ID" asp-page-handler="CancelOrder" style="background: var(--bs-card-bg);border-color: #023e73;">Cancel</a></div>
                         <div class="col"><a class="btn d-block w-100" asp-page="/Payment" asp-route-id="@Model.Order.ID" type="button" style="background: #f27052; color:white;">Continue</a></div>
                     </div>
                 </div>

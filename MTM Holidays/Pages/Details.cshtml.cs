@@ -4,20 +4,22 @@ using Microsoft.EntityFrameworkCore;
 using MTM_Holidays.Models;
 
 
-namespace MTM_Holidays.Pages.Shared
+namespace MTM_Holidays.Pages
 {
-    public class HolidayModel : PageModel
+    /// <author>Milena Michalska</author>
+    /// <version>20th Jan 2023</version>
+    public class DetailsModel : PageModel
     {
         private readonly MTM_Holidays.Data.ApplicationDbContext _context;
 
-        public HolidayModel(MTM_Holidays.Data.ApplicationDbContext context)
+        public DetailsModel(MTM_Holidays.Data.ApplicationDbContext context)
         {
             _context = context;
         }
-    
+
 
         [BindProperty]
-        public Holiday Holiday { get; set; }
+        public Holiday Holiday { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -32,24 +34,13 @@ namespace MTM_Holidays.Pages.Shared
             {
                 return NotFound();
             }
+
+            holiday.OriginAddress = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == holiday.OriginAddressID);
+            holiday.DestinationAddress = await _context.Addresses.FirstOrDefaultAsync(m => m.ID == holiday.DestinationAddressID);
+            holiday.Pictures = await _context.Pictures.Where(m => m.HolidayID == holiday.ID).ToListAsync(); ;
             Holiday = holiday;
 
             return Page();
-        }
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (!ModelState.IsValid || _context.Holidays == null || Holiday == null)
-                       
-            {
-                return await OnGetAsync(Holiday.ID);
-            }
-
-     
-
-            // Saves the data to the database
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("Details", new { id = Holiday.ID });
         }
     }
 }

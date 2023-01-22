@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,8 @@ namespace MTM_Holidays.Pages
     /// </summary>
     /// <author>Tomás Pinto</author>
     /// <version>20th Jan 2023</version>
+
+    [Authorize]
     public class PaymentModel : PageModel
     {
         private readonly MTM_Holidays.Data.ApplicationDbContext _context;
@@ -42,6 +45,10 @@ namespace MTM_Holidays.Pages
             if (id == null || _context.Orders == null)
             {
                 return NotFound();
+            }
+            if (User.Identity.Name != Order.Customer.EmailAddress)
+            {
+                return RedirectToPage("Unauthorized");
             }
 
             var order = await _context.Orders.FirstOrDefaultAsync(m => m.ID == id);

@@ -1,5 +1,5 @@
 ﻿@page
-@model MTM_Holidays.Pages.OrderModel
+@model MTM_Holidays.Pages.DetailsModel
 
 @{
     ViewData["Title"] = "Holiday - " + Model.Holiday.Title;
@@ -17,7 +17,7 @@
                         <h5 class="float-end">@Model.Holiday.Rating<i class="bi bi-star-fill text-warning"></i></h5>
                     </div>
                     <div class="card-body">
-                        <img style="width:100%; height:auto;" src="assets/img/elektra-klimi--Vss0cpydCw-unsplash.jpg">
+                        <img style="width:100%; height:auto;" src="@Url.Content(Model.Holiday.Pictures[0].URL)">
                         <p class="card-text mt-3">@Model.Holiday.Description</p>
                         <p class="mt-4">Flying from: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.OriginAddress.Town<span>, @Model.Holiday.OriginAddress.Country</span></span></p>
                         <p>Flying to: <span class="text-decoration-underline" style="color: #0D4C73">@Model.Holiday.DestinationAddress.Town<span>, @Model.Holiday.DestinationAddress.Country</span></span></p>
