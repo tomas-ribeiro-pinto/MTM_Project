@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{461056B8-C6BA-49DA-851F-085E84BB2622}|Default">
   <MonoDevelop.Ide.ItemProperties.MTM_220Holidays PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Checkout.cshtml.cs">
     <Files>
       <File FileName="Pages/Holidays/Create.cshtml" />
       <File FileName="Pages/Addresses/Create.cshtml" />
@@ -39,9 +39,9 @@
       <File FileName="Pages/Orders/Details.cshtml" />
       <File FileName="Pages/Orders/Details.cshtml.cs" />
       <File FileName="wwwroot/css/site.css" />
-      <File FileName="Pages/Holiday.cshtml" Line="1" Column="1" />
-      <File FileName="Pages/Holiday.cshtml.cs" Line="16" Column="10" />
-      <File FileName="Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Holiday.cshtml" />
+      <File FileName="Pages/Holiday.cshtml.cs" />
+      <File FileName="Pages/_ViewStart.cshtml" />
       <File FileName="Pages/CardPayments/Delete.cshtml.cs" />
       <File FileName="Pages/CardPayments/Details.cshtml.cs" />
       <File FileName="Pages/Customers/Details.cshtml.cs" />
@@ -54,22 +54,22 @@
       <File FileName="Pages/OrderHolidays/Details.cshtml.cs" />
       <File FileName="Pages/OrderHolidays/Create.cshtml.cs" />
       <File FileName="Pages/OrderHolidays/Delete.cshtml.cs" />
-      <File FileName="Pages/Order.cshtml.cs" Line="1" Column="1" />
-      <File FileName="Pages/Order.cshtml" Line="3" Column="1" />
+      <File FileName="Pages/Order.cshtml.cs" />
+      <File FileName="Pages/Order.cshtml" />
       <File FileName="Pages/Holidays/Details.cshtml" />
       <File FileName="Pages/Holidays/Edit.cshtml.cs" />
       <File FileName="Pages/Holidays/Edit.cshtml" />
       <File FileName="Pages/Error.cshtml" />
       <File FileName="Pages/Payment.cshtml" />
-      <File FileName="Pages/Payment.cshtml.cs" Line="58" Column="1" />
+      <File FileName="Pages/Payment.cshtml.cs" />
       <File FileName="Pages/Holidays/Index.cshtml" />
       <File FileName="Pages/Privacy.cshtml" />
-      <File FileName="Pages/Confirmation.cshtml" Line="40" Column="93" />
-      <File FileName="Pages/Confirmation.cshtml.cs" Line="48" Column="1" />
-      <File FileName="Pages/Details.cshtml" Line="1" Column="1" />
-      <File FileName="Pages/Details.cshtml.cs" Line="9" Column="1" />
-      <File FileName="Pages/OrderEdit.cshtml" Line="1" Column="1" />
-      <File FileName="Pages/OrderEdit.cshtml.cs" Line="68" Column="14" />
+      <File FileName="Pages/Confirmation.cshtml" />
+      <File FileName="Pages/Confirmation.cshtml.cs" />
+      <File FileName="Pages/Details.cshtml" />
+      <File FileName="Pages/Details.cshtml.cs" />
+      <File FileName="Pages/OrderEdit.cshtml" />
+      <File FileName="Pages/OrderEdit.cshtml.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -90,10 +90,11 @@
                   <Node name="Details.cshtml" expanded="True" />
                   <Node name="Edit.cshtml" expanded="True" />
                 </Node>
-                <Node name="Checkout.cshtml" expanded="True" />
+                <Node name="Checkout.cshtml" expanded="True">
+                  <Node name="Checkout.cshtml.cs" selected="True" />
+                </Node>
                 <Node name="Confirmation.cshtml" expanded="True" />
                 <Node name="Details.cshtml" expanded="True" />
-                <Node name="Index.cshtml" selected="True" />
                 <Node name="Order.cshtml" expanded="True" />
                 <Node name="OrderEdit.cshtml" expanded="True" />
                 <Node name="Payment.cshtml" expanded="True" />

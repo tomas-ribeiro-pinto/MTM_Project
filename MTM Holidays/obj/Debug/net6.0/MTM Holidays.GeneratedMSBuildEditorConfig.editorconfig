@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Areas/Identity/Pages/MyOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvTXlPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/tomaspinto/Documents/GitHub/MTM_Project/MTM Holidays/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
