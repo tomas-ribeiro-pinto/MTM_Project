@@ -47,32 +47,47 @@
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-1">...</button>
             <div id="menu" class="collapse navbar-collapse">
                 <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <button class="btn mt-1" type="submit" style="background-color:#567b92; color:white" href="#">Hotels</button>&ensp;
+                    <li class="nav-item mx-1">
+                        @if (Model.CurrentFilter == "hotel")
+                        {
+                            <a class="btn mt-1" asp-page="./Holiday" asp-route-sortOrder="@Model.PriceSort" asp-route-currentFilter="" style="background-color:#023E73; color: white">Hotels</a>
+                        }
+                        else
+                        {
+                            <a class="btn mt-1" asp-page="./Holiday" asp-route-sortOrder="@Model.PriceSort" asp-route-currentFilter="hotel" style="background-color:#567b92; color:white">Hotels</a>
+                        }
                     </li>
-                    <li class="nav-item">
-                        <button class="btn mt-1" type="submit" style="background-color:#567b92; color:white" href="#">Resorts</button>&ensp;
+                    <li class="nav-item mx-1">
+                        @if (Model.CurrentFilter == "resort")
+                        {
+                            <a class="btn mt-1" asp-page="./Holiday" asp-route-sortOrder="@Model.PriceSort" asp-route-currentFilter="" style="background-color:#023E73; color: white">Resorts</a>
+                        }
+                        else
+                        {
+                            <a class="btn mt-1" asp-page="./Holiday" asp-route-sortOrder="@Model.PriceSort" asp-route-currentFilter="resort" style="background-color:#567b92; color:white">Resorts</a>
+                        }
                     </li>
-                    <li class="nav-item">
-                        <button class="btn mt-1" type="submit" style="background-color:#567b92; color:white" href="#">Private</button>&ensp;
+                    <li class="nav-item mx-1">
+                        @if (Model.CurrentFilter == "private")
+                        {
+                            <a class="btn mt-1" asp-page="./Holiday" asp-route-sortOrder="@Model.PriceSort" asp-route-currentFilter="" style="background-color:#023E73; color: white">Private</a>
+                        }
+                        else
+                        {
+                            <a class="btn mt-1" asp-page="./Holiday" asp-route-sortOrder="@Model.PriceSort" asp-route-currentFilter="private" style="background-color:#567b92; color:white">Private</a>
+                        }
                     </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle mt-1" style="background-color:#023E73; color:white;" aria-expanded="false" data-bs-toggle="dropdown" type="button">Sort By </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Price: High to Low</a>
-                                <a class="dropdown-item" href="#">Price: Low to High</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item d-none d-xs-block d-md-block"></li>
-                    <li class="nav-item d-none d-xs-block d-md-block">
-                        <a class="nav-link" href="#"></a>
+                    <li class="nav-item mx-3">
+                        <a class="btn mt-1" style="background: #023E73; color: white" asp-page="./Holiday" asp-route-sortOrder="@Model.PriceSort" asp-route-currentFilter="@Model.CurrentFilter">Sort by Price</a>
                     </li>
                 </ul>
-                <form class="d-flex pl-5 justify-content-end" style="margin-left:500px" method="post">
-                    <div class="shadow-lg mt-3 mb-3"><input class="form-control" type="text" name="Destination" placeholder="Destination " /></div>
-                    <div class="shadow-lg mt-3 mb-3"><button class="btn" type="submit" style="background-color:#567b92; height:38px; color:white">Search <i class="bi bi-search"></i> </button></div>
+                <form asp-page="./Holiday" class="d-flex pl-5 justify-content-end" style="margin-left:500px" method="get">
+                    <div class="shadow-lg mt-3 mb-3">
+                        <input class="form-control" type="text" name="SearchString" value="@Model.SearchString" placeholder="Destination " />
+                    </div>
+                    <div class="shadow-lg mt-3 mb-3">
+                        <button class="btn" type="submit" style="background-color:#567b92; height:38px; color:white">Search <i class="bi bi-search"></i> </button>
+                    </div>
                 </form>
             </div>
             <div id="menu-1" class="collapse navbar-collapse"></div>
@@ -84,101 +99,20 @@
 <br />
 
 <!--Products-->
-<body>
-    <div class="row" style="width:50%; padding-left:150px;">
-        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
-            <div class="card mb-2 mt-4 box-shadow">
-                <img src="~/assets/img/ibiza.jpg" class="card-img-center" style="width:100%; height:240px;">
-                <div class="card-body">
-                    <h4 class="card-text">Ibiza, Spain </h4>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                        </div>
+<div class="container">
+    <div class="row">
+        @foreach (var holiday in Model.Holidays)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img src="@Url.Content(holiday.Pictures[0].URL)" class="card-img-top" style="width:345px; height:240px; position:relative;">
+                    <div class="card-body">
+                        <span class="bg-dark text-light rounded p-1" style="font-size:0.9em;">£@holiday.Price</span>
+                        <h4 class="card-text">@holiday.Title</h4>
+                        <a asp-route-id="@holiday.ID" asp-page="/Details" class="btn btn-primary shadow float-end mt-1" style="background: #567b92;border-style: none;border-color: var(--bs-navbar-hover-color);">See Details</a>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     </div>
-    <div class="row" style="width:50%; padding-left:150px;">
-        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
-            <div class="card mb-2 mt-5 box-shadow">
-                <img src="~/assets/img/bondi.jpg" class="card-img-center" style="width:100%; height:240px;">
-                <div class="card-body">
-                    <h4 class="card-text">Bondi Beach, Australia </h4>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" style="width:50%; padding-left:150px;">
-        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
-            <div class="card mb-2 mt-5 box-shadow">
-                <img src="~/assets/img/navagio.jpg" class="card-img-center" style="width:100%; height:240px;">
-                <div class="card-body">
-                    <h4 class="card-text">Navagio Beach, Greece </h4>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" style="width:50%; padding-left:150px;">
-        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
-            <div class="card mb-2 mt-5 box-shadow">
-                <img src="~/assets/img/antalaya.jpg" class="card-img-center" style="width:100%; height:240px;">
-                <div class="card-body">
-                    <h4 class="card-text">Antalaya Beach, Turkey </h4>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" style="width:50%; padding-left:150px;">
-        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
-            <div class="card mb-2 mt-5 box-shadow">
-                <img src="~/assets/img/tailand.jpg" class="card-img-center" style="width:100%; height:240px;">
-                <div class="card-body">
-                    <h4 class="card-text">Phuket, Tailand </h4>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" style="width:50%; padding-left:150px;">
-        <div class="row-md-4" style="padding-left:55px; margin-left:50%;">
-            <div class="card mb-2 mt-5 box-shadow">
-                <img src="~/assets/img/santorini.jpg" class="card-img-center" style="width:100%; height:240px;">
-                <div class="card-body">
-                    <h4 class="card-text">Santorini Beach, Greece </h4>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View details</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Book a holiday</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+</div>

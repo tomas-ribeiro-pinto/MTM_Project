@@ -13,8 +13,8 @@
                     <h1 class="display-4 fw-bold"><span style="background-color: rgb(2, 62, 115);">&nbsp;MTM&nbsp;</span></h1>
                     <h3 class="fw-bold text-dark">Holidays&nbsp;<span style="text-decoration: underline; text-decoration-color: #F27052;">sorted</span>.</h3>
                     <p class="fs-5 text-muted mt-5">Search our extensive offer for your next beach holidays.</p>
-                    <form class="d-flex justify-content-center flex-wrap" method="post">
-                        <div class="shadow-lg mb-3"><input class="form-control" type="text" name="search" placeholder="Your next holiday..."></div>
+                    <form asp-page="/Holiday" class="d-flex justify-content-center flex-wrap" method="get">
+                        <div class="shadow-lg mb-3"><input class="form-control" type="text" name="searchString" placeholder="Your next holiday..."></div>
                         <div class="shadow-lg mb-3"><button class="btn btn-primary" type="submit" style="background: rgb(2,62,115);">Search</button></div>
                         <div class="col-12 col-lg-10 d-inline-block float-end mx-auto">
                             <div class="text-center position-relative"></div>
