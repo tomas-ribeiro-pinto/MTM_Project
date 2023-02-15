@@ -1,0 +1,39 @@
+﻿@page
+@model MTM_Holidays.Areas.Identity.Pages.MyOrdersModel
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<div class="p-2">
+    <div class="card">
+        <div class="card-body shadow-none" style="background: #023e73;border: 0.5px solid rgb(2,62,115);">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-black-50"></p>
+                            <div class="row">
+                                <div class="col">
+                                    <h1 style="text-align: left;color: var(--bs-card-bg);">Your orders</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row p-3">
+    @foreach (var order in Model.Orders)
+    {
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Order #@order.ID<span style="font-size: 0.8em;color: rgb(242,111,83);">&nbsp;(@order.OrderDate.ToShortDateString())</span></h4>
+                    <p class="card-text mb-0 float-start"><strong>Total Price: </strong>£@Model.CalculateTotal(order)</p><a class="btn float-end" style="background: #F27052;color: var(--bs-card-bg);" href="~/Confirmation?id=@order.ID">See Details</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

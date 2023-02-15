@@ -1,0 +1,29 @@
+﻿* {
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  margin-bottom: 60px;
+}

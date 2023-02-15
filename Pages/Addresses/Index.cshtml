@@ -1,0 +1,66 @@
+@page
+@model MTM_Holidays.Pages.Addresses.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Address[0].Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address[0].Town)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address[0].PostCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address[0].County)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address[0].Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address[0].Region)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Address) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Town)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.County)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

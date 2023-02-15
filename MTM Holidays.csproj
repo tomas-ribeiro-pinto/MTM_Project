@@ -1,0 +1,95 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-MTM_Holidays-357081a3-b7a9-4fde-ab39-b4d6364e6a0e</UserSecretsId>
+    <RootNamespace>MTM_Holidays</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Pages\Addresses\" />
+    <None Remove="Pages\Holidays\" />
+    <None Remove="Pages\Orders\" />
+    <None Remove="Pages\Pictures\" />
+    <None Remove="Pages\Discounts\" />
+    <None Remove="Pages\Customers\" />
+    <None Remove="Pages\CardPayments\" />
+    <None Remove="Pages\OrderHolidays\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\assets\img\brands\instacart.png" />
+    <None Include="wwwroot\assets\img\brands\kickstarter.png" />
+    <None Include="wwwroot\assets\img\brands\lyft.png" />
+    <None Include="wwwroot\assets\img\brands\pinterest.png" />
+    <None Include="wwwroot\assets\img\brands\shopify.png" />
+    <None Include="wwwroot\assets\img\brands\twitter.png" />
+    <None Include="wwwroot\assets\img\elektra-klimi--Vss0cpydCw-unsplash.jpg" />
+    <None Include="wwwroot\assets\img\illustrations\404.svg" />
+    <None Include="wwwroot\assets\img\illustrations\harshil-gudka-77zGnfU_SFU-unsplash.jpg" />
+    <None Include="wwwroot\assets\img\illustrations\meeting.svg" />
+    <None Include="wwwroot\assets\img\illustrations\presentation-2.svg" />
+    <None Include="wwwroot\assets\img\illustrations\presentation.svg" />
+    <None Include="wwwroot\assets\img\illustrations\ranking.svg" />
+    <None Include="wwwroot\assets\img\illustrations\teamwork.svg" />
+    <None Include="wwwroot\assets\img\illustrations\video-call.svg" />
+    <None Include="wwwroot\assets\img\illustrations\web-development.svg" />
+    <None Include="wwwroot\assets\img\jay-wennington-BM9Pngg6hAc-unsplash.jpg" />
+    <None Include="wwwroot\assets\img\mtm_logo_crop.png" />
+    <None Include="wwwroot\assets\img\MTM-3_crop.png" />
+    <None Include="wwwroot\assets\img\MTM-4.png" />
+    <None Include="wwwroot\assets\img\slow-ibiza-zImMn5pyLXc-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\img\brands\instacart.png" />
+    <Content Remove="wwwroot\assets\img\brands\kickstarter.png" />
+    <Content Remove="wwwroot\assets\img\brands\lyft.png" />
+    <Content Remove="wwwroot\assets\img\brands\pinterest.png" />
+    <Content Remove="wwwroot\assets\img\brands\shopify.png" />
+    <Content Remove="wwwroot\assets\img\brands\twitter.png" />
+    <Content Remove="wwwroot\assets\img\elektra-klimi--Vss0cpydCw-unsplash.jpg" />
+    <Content Remove="wwwroot\assets\img\illustrations\404.svg" />
+    <Content Remove="wwwroot\assets\img\illustrations\harshil-gudka-77zGnfU_SFU-unsplash.jpg" />
+    <Content Remove="wwwroot\assets\img\illustrations\meeting.svg" />
+    <Content Remove="wwwroot\assets\img\illustrations\presentation-2.svg" />
+    <Content Remove="wwwroot\assets\img\illustrations\presentation.svg" />
+    <Content Remove="wwwroot\assets\img\illustrations\ranking.svg" />
+    <Content Remove="wwwroot\assets\img\illustrations\teamwork.svg" />
+    <Content Remove="wwwroot\assets\img\illustrations\video-call.svg" />
+    <Content Remove="wwwroot\assets\img\illustrations\web-development.svg" />
+    <Content Remove="wwwroot\assets\img\jay-wennington-BM9Pngg6hAc-unsplash.jpg" />
+    <Content Remove="wwwroot\assets\img\mtm_logo_crop.png" />
+    <Content Remove="wwwroot\assets\img\MTM-3_crop.png" />
+    <Content Remove="wwwroot\assets\img\MTM-4.png" />
+    <Content Remove="wwwroot\assets\img\slow-ibiza-zImMn5pyLXc-unsplash.jpg" />
+    <Content Remove="wwwroot\assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\" />
+    <Folder Include="Pages\Addresses\" />
+    <Folder Include="Pages\Holidays\" />
+    <Folder Include="Pages\Orders\" />
+    <Folder Include="Pages\Pictures\" />
+    <Folder Include="Pages\Discounts\" />
+    <Folder Include="Pages\Customers\" />
+    <Folder Include="Pages\CardPayments\" />
+    <Folder Include="Pages\OrderHolidays\" />
+  </ItemGroup>
+</Project>
