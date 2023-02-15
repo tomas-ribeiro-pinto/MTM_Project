@@ -8,6 +8,7 @@ The project aims to build and develop an e-commerce website, using Microsoft’s
 
 From a customer perspective, ’MTM Holidays’ website will allow users to browse packages, add them to a checkout cart, and register themselves as users to complete the checkout and payment process. 
 
+![Screenshot](https://github.com/tomas-ribeiro-pinto/MTM_Project/blob/main/Screenshot.png)
 
 ## Getting Started
 
