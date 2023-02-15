@@ -22,7 +22,7 @@ From a customer perspective, ’MTM Holidays’ website will allow users to brow
 
 ## Authors
 
-Contributors names and contact info
+Contributors names and contact info:
 
-Tomás Pinto - morato.toms@gmail.com
-Milena Michalska - milena.michalska11@gmail.com
+* Tomás Pinto - morato.toms@gmail.com
+* Milena Michalska - milena.michalska11@gmail.com
